@@ -12,163 +12,225 @@
 <meta name="theme-color" content="#f4fbfa">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"LocalBusiness","name":"Nutribull - nutrição animal e agropecuários","telephone":"+553335328149","address":{"@type":"PostalAddress","streetAddress":"Avenida Tancredo Neves, 25","addressLocality":"Novo Oriente de Minas","addressCountry":"BR"},"openingHours":"Seg a Sex 09h a 18h · Sáb 07h a 13h"}</script>
+<script>(function(){var d=document.documentElement;if(new URLSearchParams(location.search).has('print')){d.classList.add('print');return}if(!('IntersectionObserver' in window)||matchMedia('(prefers-reduced-motion: reduce)').matches)return;d.classList.add('anima');addEventListener('DOMContentLoaded',function(){var o=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');o.unobserve(e.target)}})},{rootMargin:'0px 0px -6% 0px',threshold:.06});document.querySelectorAll('.rv').forEach(function(el){o.observe(el)})})})()</script>
 <style>
 :root{--fundo:#f4fbfa;--tinta:#12302e;--destaque:#f08a24;--sobre:#12302e;--suave:#e2f3f0;--linha:#c9e3df;
---apagado:color-mix(in srgb,var(--tinta) 68%,var(--fundo));--titulo:'Sora',system-ui,sans-serif;--texto:'DM Sans',system-ui,sans-serif}
+--apagado:color-mix(in srgb,var(--tinta) 66%,var(--fundo));--titulo:'Sora',system-ui,sans-serif;--texto:'DM Sans',system-ui,sans-serif;
+--raio:24px;--sombra:0 40px 70px -40px color-mix(in srgb,var(--tinta) 45%,transparent);--curva:cubic-bezier(.2,.7,.2,1)}
 *{box-sizing:border-box;margin:0}
-html{scroll-behavior:smooth}
-body{background:var(--fundo);color:var(--tinta);font-family:var(--texto);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{background:var(--fundo);color:var(--tinta);font-family:var(--texto);font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+body::after{content:"";position:fixed;inset:0;z-index:90;pointer-events:none;opacity:.05;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23g)'/%3E%3C/svg%3E")}
 a{color:inherit}
 img{max-width:100%;display:block}
-.c{max-width:1120px;margin:0 auto;padding:0 20px}
-h1,h2,h3{font-family:var(--titulo);font-weight:700;line-height:1.1;letter-spacing:-.02em;text-wrap:balance}
-h1{font-size:clamp(2.4rem,8.5vw,4.4rem)}
-h2{font-size:clamp(1.8rem,5.5vw,2.8rem)}
-.previa{background:var(--destaque);color:var(--sobre);font-size:14px;font-weight:600;padding:9px 0;position:sticky;top:0;z-index:20}
-.previa .c{display:flex;gap:12px;align-items:center;justify-content:space-between;flex-wrap:wrap}
-.previa a{background:var(--sobre);color:var(--destaque);padding:5px 12px;border-radius:99px;text-decoration:none;white-space:nowrap}
-.print .previa{display:none}
-@media(max-width:520px){header.topo .btn{display:none}}
-header.topo{padding:18px 0;border-bottom:1px solid var(--linha)}
-header.topo .c{display:flex;align-items:center;justify-content:space-between;gap:16px}
-.marca{font-family:var(--titulo);font-size:1.25rem;font-weight:700;letter-spacing:-.01em;text-decoration:none;line-height:1.1}
-.btn{display:inline-flex;align-items:center;gap:9px;background:var(--destaque);color:var(--sobre);font-weight:600;text-decoration:none;padding:14px 24px;border-radius:12px;font-size:1rem;transition:transform .15s,filter .15s;border:0}
-.btn:hover{transform:translateY(-1px);filter:brightness(1.07)}
-.btn.p{padding:10px 16px;font-size:.92rem;border-radius:10px;white-space:nowrap}
-.btn.vazio{background:transparent;color:var(--tinta);box-shadow:inset 0 0 0 1.5px var(--linha)}
-.heroi{padding:clamp(44px,9vw,104px) 0 clamp(40px,7vw,80px)}
-.heroi .c{display:grid;gap:36px;align-items:center}
-.sobrancelha{display:inline-flex;gap:10px;align-items:center;font-size:.8rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--destaque);margin-bottom:18px}
-.sobrancelha::before{content:"";width:28px;height:2px;background:var(--destaque)}
-.heroi p.apoio{font-size:1.12rem;color:var(--apagado);max-width:34em;margin:20px 0 28px}
-.acoes{display:flex;gap:12px;flex-wrap:wrap}
-.nota{display:inline-flex;align-items:center;gap:8px;margin-top:26px;font-size:.95rem;color:var(--apagado)}
+::selection{background:var(--destaque);color:var(--sobre)}
+.c{max-width:1160px;margin:0 auto;padding:0 22px}
+h1,h2,h3{font-family:var(--titulo);font-weight:600;line-height:1.04;letter-spacing:-.035em;text-wrap:balance}
+h1{font-size:clamp(2.6rem,9.4vw,5.1rem)}
+h2{font-size:clamp(2rem,6.2vw,3.3rem)}
+h1 em,h2 em{font-style:normal;color:var(--destaque)}
+.olho{display:inline-flex;gap:12px;align-items:center;font-size:.74rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--destaque)}
+.olho::before{content:"";width:34px;height:1px;background:currentColor}
+.anima .rv{opacity:0;transform:translateY(24px);transition:opacity .9s var(--curva),transform .9s var(--curva);transition-delay:var(--d,0s)}
+.anima .rv.in{opacity:1;transform:none}
+
+.previa{background:var(--tinta);color:var(--fundo);font-size:13.5px;padding:9px 0}
+.previa .c{display:flex;gap:10px 16px;align-items:center;justify-content:space-between;flex-wrap:wrap}
+.previa b{font-weight:600;letter-spacing:.14em;text-transform:uppercase;font-size:11px;margin-right:8px;color:color-mix(in srgb,var(--destaque) 70%,var(--fundo))}
+.previa a{color:var(--fundo);font-weight:600;white-space:nowrap;text-underline-offset:3px}
+.previa-fixa{position:fixed;left:16px;bottom:16px;z-index:40;display:inline-flex;align-items:center;gap:8px;background:var(--tinta);color:var(--fundo);text-decoration:none;font-size:.9rem;font-weight:600;padding:13px 18px;border-radius:999px;box-shadow:0 14px 34px -10px rgba(0,0,0,.45)}
+.print .previa,.print .previa-fixa{display:none}
+
+header.topo{position:sticky;top:0;z-index:30;background:color-mix(in srgb,var(--fundo) 84%,transparent);backdrop-filter:saturate(1.5) blur(16px);-webkit-backdrop-filter:saturate(1.5) blur(16px);border-bottom:1px solid color-mix(in srgb,var(--linha) 75%,transparent)}
+header.topo .c{display:flex;align-items:center;justify-content:space-between;gap:18px;min-height:68px}
+.marca{display:inline-flex;align-items:center;gap:12px;text-decoration:none;min-width:0}
+.marca i{flex:none;width:38px;height:38px;border-radius:50%;display:grid;place-items:center;background:var(--destaque);color:var(--sobre);font-style:normal;font-family:var(--titulo);font-weight:600;font-size:.92rem;letter-spacing:-.02em}
+.marca span{font-family:var(--titulo);font-size:1.12rem;font-weight:600;letter-spacing:-.015em;line-height:1.1;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+nav.menu{display:none;gap:30px;font-size:.92rem;font-weight:500}
+nav.menu a{text-decoration:none;color:var(--apagado);transition:color .2s}
+nav.menu a:hover{color:var(--tinta)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;background:var(--destaque);color:var(--sobre);font-weight:600;text-decoration:none;padding:16px 28px;border-radius:999px;font-size:1rem;border:0;transition:transform .3s var(--curva),box-shadow .3s var(--curva);box-shadow:0 16px 32px -16px color-mix(in srgb,var(--destaque) 85%,transparent)}
+.btn:hover{transform:translateY(-2px);box-shadow:0 24px 40px -16px color-mix(in srgb,var(--destaque) 85%,transparent)}
+.btn.p{padding:11px 18px;font-size:.9rem;white-space:nowrap;box-shadow:none}
+.lnk{display:inline-flex;align-items:center;gap:8px;font-weight:600;text-decoration:none;padding:6px 0;border-bottom:1.5px solid var(--linha);transition:gap .3s var(--curva),border-color .3s}
+.lnk:hover{gap:13px;border-color:var(--destaque)}
+
+.heroi{position:relative;padding:clamp(38px,7vw,92px) 0 clamp(56px,9vw,112px);overflow:hidden}
+.heroi::before{content:"";position:absolute;top:-22%;right:-18%;width:min(86vw,880px);aspect-ratio:1;border-radius:50%;background:radial-gradient(closest-side,color-mix(in srgb,var(--destaque) 17%,transparent),transparent);pointer-events:none}
+.heroi .c{position:relative;display:grid;gap:46px;align-items:center}
+.heroi h1{margin-top:22px}
+.heroi p.apoio{font-size:clamp(1.05rem,2.7vw,1.22rem);color:var(--apagado);max-width:32em;margin:24px 0 34px}
+.acoes{display:flex;gap:16px 26px;flex-wrap:wrap;align-items:center}
+.nota{display:inline-flex;align-items:center;gap:8px;margin-top:30px;font-size:.95rem;color:var(--apagado)}
 .nota b{color:var(--tinta)}
 .nota .est{display:inline-flex;color:var(--destaque)}
-.heroi .foto{border-radius:20px;overflow:hidden;aspect-ratio:4/5;background:var(--suave)}
-.heroi .foto img{width:100%;height:100%;object-fit:cover}
-.cartao-heroi{background:var(--suave);border:1px solid var(--linha);border-radius:20px;padding:28px;display:grid;gap:18px}
-.cartao-heroi .linha{display:flex;justify-content:space-between;gap:16px;padding-bottom:16px;border-bottom:1px solid var(--linha);font-size:.98rem}
-.cartao-heroi .linha:last-of-type{border:0;padding:0}
-.cartao-heroi .linha span{color:var(--apagado)}
-.cartao-heroi .linha b{text-align:right;font-weight:600}
-.faixa{border-block:1px solid var(--linha);background:var(--suave)}
-.faixa ul{list-style:none;padding:20px 0;display:grid;gap:10px}
-.faixa li{display:flex;gap:10px;align-items:center;font-weight:500}
-.faixa li::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--destaque);flex:none}
-section.bloco{padding:clamp(52px,9vw,100px) 0}
-.cab{display:grid;gap:10px;margin-bottom:34px;max-width:38em}
-.cab p{color:var(--apagado)}
-.grade{display:grid;gap:14px}
-.serv{background:var(--suave);border:1px solid var(--linha);border-radius:16px;padding:22px;display:grid;gap:8px;align-content:start}
-.serv .num{font-family:var(--titulo);color:var(--destaque);font-size:1rem;font-weight:700;line-height:1}
-.serv h3{font-family:var(--texto);font-size:1.1rem;font-weight:600;letter-spacing:0;line-height:1.3}
-.serv p{color:var(--apagado);font-size:.96rem}
-.serv .preco{font-weight:600;color:var(--destaque);margin-top:4px}
-.galeria{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
-.galeria img{border-radius:14px;aspect-ratio:1;object-fit:cover;width:100%}
+.emblema{position:relative;isolation:isolate;justify-self:center;width:100%;max-width:440px;aspect-ratio:4/5.5;border-radius:999px 999px var(--raio) var(--raio);overflow:hidden;color:var(--sobre);box-shadow:var(--sombra);
+background:linear-gradient(168deg,color-mix(in srgb,var(--destaque) 86%,#fff) 0%,var(--destaque) 46%,color-mix(in srgb,var(--destaque) 60%,#000) 100%)}
+.emblema .aneis{position:absolute;inset:0;width:100%;height:100%;opacity:.26}
+.emblema .mono{position:absolute;left:0;right:0;top:15%;text-align:center;font-family:var(--titulo);font-weight:500;font-size:clamp(5.2rem,25vw,8.6rem);line-height:1;letter-spacing:-.05em}
+.emblema .leg{position:absolute;left:0;right:0;top:calc(15% + clamp(5.2rem,25vw,8.6rem) + 12px);text-align:center;font-size:.7rem;font-weight:600;letter-spacing:.24em;text-transform:uppercase;opacity:.85;padding:0 20px}
+.emblema img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.emblema.foto::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,rgba(0,0,0,.45))}
+.ficha{position:absolute;z-index:2;left:14px;right:14px;bottom:14px;background:color-mix(in srgb,var(--fundo) 94%,transparent);color:var(--tinta);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-radius:16px;padding:6px 18px;font-size:.9rem;box-shadow:0 12px 30px -14px rgba(0,0,0,.4)}
+.ficha div{display:flex;justify-content:space-between;gap:16px;padding:11px 0;border-bottom:1px solid var(--linha)}
+.ficha div:last-child{border:0}
+.ficha span{color:var(--apagado);flex:none}
+.ficha b{max-width:15em}
+.ficha b{text-align:right;font-weight:600}
+
+.faixa{border-block:1px solid var(--linha)}
+.faixa ul{list-style:none;padding:0;display:grid}
+.faixa li{display:flex;gap:12px;align-items:center;padding:17px 0;font-weight:500;border-bottom:1px solid var(--linha)}
+.faixa li:last-child{border-bottom:0}
+.faixa li svg{color:var(--destaque);flex:none}
+
+section.bloco{padding:clamp(64px,10vw,128px) 0}
+.cab{display:grid;gap:16px;margin-bottom:clamp(30px,5vw,56px);max-width:40em}
+.cab p{color:var(--apagado);font-size:1.05rem}
+.lista{display:grid;border-top:1px solid var(--linha)}
+.serv{display:grid;grid-template-columns:auto 1fr auto;gap:6px 18px;align-items:baseline;padding:26px 0;border-bottom:1px solid var(--linha);transition:padding .4s var(--curva)}
+.serv .num{font-size:.8rem;font-weight:600;letter-spacing:.12em;color:var(--destaque);font-variant-numeric:tabular-nums}
+.serv h3{font-size:clamp(1.3rem,3.9vw,1.7rem);line-height:1.15;letter-spacing:-.02em}
+.serv p{grid-column:2/-1;color:var(--apagado);font-size:.98rem;max-width:34em}
+.serv .preco{font-weight:600;white-space:nowrap;font-variant-numeric:tabular-nums}
+@media(hover:hover){.serv:hover{padding-left:12px}}
+.galeria{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+.galeria img{border-radius:18px;aspect-ratio:4/5;object-fit:cover;width:100%}
 .sobre{background:var(--suave);border-block:1px solid var(--linha)}
-.sobre p{font-size:clamp(1.15rem,3.2vw,1.5rem);line-height:1.5;max-width:30em}
-.onde .c{display:grid;gap:28px}
-.dados{display:grid;gap:20px;align-content:start}
-.dados dt{font-size:.78rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--destaque);margin-bottom:4px}
-.dados dd{font-size:1.05rem}
-.mapa{border:1px solid var(--linha);border-radius:18px;overflow:hidden;min-height:300px;background:var(--suave)}
-.mapa iframe{width:100%;height:100%;min-height:300px;border:0;display:block}
-.final{text-align:center;background:var(--destaque);color:var(--sobre)}
-.final h2{margin-bottom:12px}
-.final p{opacity:.85;margin-bottom:26px}
-.final .btn{background:var(--sobre);color:var(--destaque)}
-footer{padding:30px 0 96px;font-size:.9rem;color:var(--apagado)}
-footer .c{display:flex;gap:10px 24px;flex-wrap:wrap;justify-content:space-between}
-.flutua{position:fixed;right:16px;bottom:16px;z-index:30;box-shadow:0 8px 28px rgba(0,0,0,.3);border-radius:99px;padding:14px 20px}
+.sobre .c{display:grid;gap:26px;max-width:960px}
+.sobre .aspas{font-family:Georgia,'Times New Roman',serif;font-size:6rem;line-height:.62;height:38px;color:var(--destaque)}
+.sobre blockquote{font-family:var(--titulo);font-weight:500;font-size:clamp(1.5rem,4.4vw,2.5rem);line-height:1.24;letter-spacing:-.028em;text-wrap:balance}
+.sobre p{color:var(--apagado);max-width:36em;font-size:1.05rem}
+.sobre .ass{display:flex;align-items:center;gap:12px;font-size:.74rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--apagado)}
+.sobre .ass::before{content:"";width:34px;height:1px;background:currentColor}
+.onde .c{display:grid;gap:36px}
+.onde.so .c{max-width:760px}
+.dados{display:grid;border-top:1px solid var(--linha)}
+.dados>div{display:grid;grid-template-columns:104px 1fr;gap:14px;padding:19px 0;border-bottom:1px solid var(--linha);align-items:baseline}
+.dados dt{font-size:.72rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--apagado)}
+.dados dd{font-size:1.06rem;font-weight:500}
+.dados dd a{text-decoration-color:var(--linha);text-underline-offset:4px}
+.onde .lnk{margin-top:26px}
+.mapa{border-radius:var(--raio);overflow:hidden;min-height:340px;background:var(--suave);box-shadow:var(--sombra)}
+.mapa iframe{width:100%;height:100%;min-height:340px;border:0;display:block;filter:grayscale(.35) contrast(1.04)}
+.final{position:relative;overflow:hidden;text-align:center;background:var(--destaque);color:var(--sobre);padding:clamp(84px,13vw,156px) 0}
+.final::before{content:"";position:absolute;inset:0;background:repeating-radial-gradient(circle at 50% 118%,transparent 0 64px,color-mix(in srgb,var(--sobre) 16%,transparent) 64px 65px);pointer-events:none}
+.final .c{position:relative;display:grid;justify-items:center;gap:20px}
+.final .olho{color:inherit;opacity:.8}
+.final h2{font-size:clamp(2.3rem,8vw,4.4rem);max-width:14em}
+.final p{opacity:.86;max-width:30em;font-size:1.08rem}
+.final .btn{margin-top:14px;background:var(--sobre);color:var(--destaque);box-shadow:0 22px 44px -20px rgba(0,0,0,.55)}
+footer{padding:44px 0 104px;font-size:.9rem;color:var(--apagado)}
+footer .c{display:grid;gap:22px}
+footer .linha{display:flex;gap:10px 28px;flex-wrap:wrap;justify-content:space-between;padding-top:22px;border-top:1px solid var(--linha)}
+.flutua{position:fixed;right:16px;bottom:16px;z-index:40;padding:14px 20px;box-shadow:0 14px 34px -10px rgba(0,0,0,.45)}
+@media(max-width:560px){header.topo .btn.p{padding:0;width:44px;height:44px}header.topo .btn.p span{display:none}.previa-fixa{font-size:.84rem;padding:12px 15px}}
 @media(min-width:720px){
+  .previa-fixa{left:auto;right:16px;bottom:82px}
   .faixa ul{grid-template-columns:repeat(3,1fr)}
-  .grade{grid-template-columns:repeat(2,1fr)}
+  .faixa li{border-bottom:0;padding:26px 24px;justify-content:center}
+  .faixa li+li{border-left:1px solid var(--linha)}
   .galeria{grid-template-columns:repeat(3,1fr)}
-  .onde .c{grid-template-columns:1fr 1.3fr}
+  .onde:not(.so) .c{grid-template-columns:1fr 1.25fr;gap:56px;align-items:start}
+}
+@media(min-width:900px){
+  nav.menu{display:flex}
+  .lista{grid-template-columns:1fr 1fr;column-gap:72px}
 }
 @media(min-width:980px){
-  .heroi .c{grid-template-columns:1.25fr .9fr}
-  .grade{grid-template-columns:repeat(3,1fr)}
+  .heroi .c{grid-template-columns:1.2fr .8fr;gap:64px}
+  .emblema{justify-self:end}
 }
-@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn{transition:none}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn,.lnk,.serv{transition:none}}
 </style>
 </head>
 <body>
-<div class="previa"><div class="c"><span>Prévia criada para Nutribull - nutrição animal e agropecuários — este site ainda não está no ar.</span></div></div>
+<div class="previa"><div class="c"><span><b>Prévia</b>Este site ainda não está no ar.</span><a href="contratar/">Colocar no ar</a></div></div>
 <header class="topo"><div class="c">
-  <a class="marca" href="#">Nutribull - nutrição animal e agropecuários</a>
-  <a class="btn p" href="tel:+553335328149"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg><span>Ligar agora</span></a>
+  <a class="marca" href="#"><i>NN</i><span>Nutribull - nutrição animal e agropecuários</span></a>
+  <nav class="menu" aria-label="Seções"><a href="#servicos">Serviços</a><a href="#sobre">Sobre</a><a href="#onde">Contato</a></nav>
+  <a class="btn p" href="tel:+553335328149" aria-label="Ligar agora"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg><span>Ligar agora</span></a>
 </div></header>
 
 <main>
 <section class="heroi"><div class="c">
-  <div>
-    <div class="sobrancelha">Pet shop · Novo Oriente de Minas</div>
+  <div class="rv">
+    <div class="olho">Pet shop · Novo Oriente de Minas</div>
     <h1>Seu pet limpo, cheiroso e bem cuidado.</h1>
     <p class="apoio">Banho, tosa e cuidados com carinho de verdade em Novo Oriente de Minas. Agende e acompanhe tudo.</p>
     <div class="acoes">
-      <a class="btn" href="tel:+553335328149"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg><span>Ligar agora</span></a>
-      <a class="btn vazio" href="#servicos">Ver serviços</a>
+      <a class="btn" href="tel:+553335328149"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg><span>Ligar agora</span></a>
+      <a class="lnk" href="#servicos">Ver serviços <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
     </div>
     
   </div>
-  <aside class="cartao-heroi">
-      <div class="linha"><span>Horário</span><b>Seg a Sex 09h a 18h · Sáb 07h a 13h</b></div>
-      <div class="linha"><span>Endereço</span><b>Avenida Tancredo Neves, 25, Novo Oriente de Minas</b></div>
-      <div class="linha"><span>Telefone</span><b>(33) 3532-8149</b></div>
-      <a class="btn" href="tel:+553335328149" style="justify-content:center"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg><span>Ligar agora</span></a>
-    </aside>
+  <div class="emblema rv" style="--d:.15s">
+    <svg class="aneis" viewBox="0 0 400 460" preserveAspectRatio="xMidYMid slice" fill="none" stroke="currentColor" stroke-width="1" aria-hidden="true"><circle cx="200" cy="196" r="74"/><circle cx="200" cy="196" r="122"/><circle cx="200" cy="196" r="170"/><circle cx="200" cy="196" r="218"/><circle cx="200" cy="196" r="266"/><circle cx="200" cy="196" r="314"/></svg><div class="mono" aria-hidden="true">NN</div><div class="leg">Novo Oriente de Minas</div>
+    <div class="ficha">
+      <div><span>Horário</span><b>Seg a Sex 09h a 18h · Sáb 07h a 13h</b></div>
+      <div><span>Endereço</span><b>Avenida Tancredo Neves, 25, Novo Oriente de Minas</b></div>
+      <div><span>Telefone</span><b>(33) 3532-8149</b></div>
+    </div>
+  </div>
 </div></section>
 
-<div class="faixa"><div class="c"><ul><li>Profissionais experientes</li><li>Leva e traz</li><li>Avisamos quando ficar pronto</li></ul></div></div>
+<div class="faixa"><div class="c"><ul><li><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>Profissionais experientes</span></li><li><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>Leva e traz</span></li><li><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>Avisamos quando ficar pronto</span></li></ul></div></div>
 
 <section class="bloco" id="servicos"><div class="c">
-  <div class="cab"><h2>O que fazemos</h2><p>Escolha o que precisa e fale com a gente — respondemos rápido.</p></div>
-  <div class="grade">
-    <article class="serv"><span class="num">01</span><h3>Banho</h3><p>Produtos adequados para cada tipo de pelagem.</p></article>
-    <article class="serv"><span class="num">02</span><h3>Tosa</h3><p>Higiênica, na máquina ou na tesoura.</p></article>
-    <article class="serv"><span class="num">03</span><h3>Hidratação</h3><p>Pelo macio e brilhante por mais tempo.</p></article>
-    <article class="serv"><span class="num">04</span><h3>Corte de unhas</h3><p>Com cuidado e sem estresse.</p></article>
-    <article class="serv"><span class="num">05</span><h3>Leva e traz</h3><p>Buscamos e entregamos o seu pet.</p></article>
-    <article class="serv"><span class="num">06</span><h3>Rações e acessórios</h3><p>As principais marcas à pronta entrega.</p></article>
+  <div class="cab rv"><span class="olho">Serviços</span><h2>O que fazemos <em>por você.</em></h2><p>Escolha o que precisa e entre em contato.</p></div>
+  <div class="lista">
+    <article class="serv rv" style="--d:0s"><span class="num">01</span><h3>Banho</h3><span></span><p>Produtos adequados para cada tipo de pelagem.</p></article>
+    <article class="serv rv" style="--d:0.08s"><span class="num">02</span><h3>Tosa</h3><span></span><p>Higiênica, na máquina ou na tesoura.</p></article>
+    <article class="serv rv" style="--d:0s"><span class="num">03</span><h3>Hidratação</h3><span></span><p>Pelo macio e brilhante por mais tempo.</p></article>
+    <article class="serv rv" style="--d:0.08s"><span class="num">04</span><h3>Corte de unhas</h3><span></span><p>Com cuidado e sem estresse.</p></article>
+    <article class="serv rv" style="--d:0s"><span class="num">05</span><h3>Leva e traz</h3><span></span><p>Buscamos e entregamos o seu pet.</p></article>
+    <article class="serv rv" style="--d:0.08s"><span class="num">06</span><h3>Rações e acessórios</h3><span></span><p>As principais marcas à pronta entrega.</p></article>
   </div>
 </div></section>
 
 
 
-<section class="bloco sobre"><div class="c"><p>Aqui o compromisso é simples: fazer bem feito e tratar cada cliente pelo nome. Atendemos em Novo Oriente de Minas. Tem alguma dúvida? Entre em contato — respondemos rápido.</p></div></section>
+<section class="bloco sobre" id="sobre"><div class="c rv">
+  <div class="aspas" aria-hidden="true">“</div>
+  <blockquote>Aqui o compromisso é simples: fazer bem feito e tratar cada cliente pelo nome.</blockquote>
+  <p>Atendemos em Novo Oriente de Minas. Para tirar dúvidas, entre em contato.</p>
+  <div class="ass">Nutribull - nutrição animal e agropecuários</div>
+</div></section>
 
 <section class="bloco onde" id="onde"><div class="c">
-  <div>
-    <div class="cab"><h2>Onde estamos</h2></div>
+  <div class="rv">
+    <div class="cab"><span class="olho">Contato</span><h2>Onde <em>estamos.</em></h2></div>
     <dl class="dados">
       <div><dt>Endereço</dt><dd>Avenida Tancredo Neves, 25, Novo Oriente de Minas</dd></div>
       <div><dt>Horário</dt><dd>Seg a Sex 09h a 18h · Sáb 07h a 13h</dd></div>
       <div><dt>Telefone</dt><dd><a href="tel:+553335328149">(33) 3532-8149</a></dd></div>
       
-      <div><a class="btn vazio" href="https://www.google.com/maps/search/?api=1&query=Nutribull%20-%20nutri%C3%A7%C3%A3o%20animal%20e%20agropecu%C3%A1rios%20Avenida%20Tancredo%20Neves%2C%2025%20Novo%20Oriente%20de%20Minas">Como chegar</a></div>
+      
     </dl>
+    <a class="lnk" href="https://www.google.com/maps/search/?api=1&query=Avenida%20Tancredo%20Neves%2C%2025%2C%20Novo%20Oriente%20de%20Minas">Como chegar <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
   </div>
-  <div class="mapa"><iframe title="Mapa" loading="lazy" src="https://www.google.com/maps?q=Nutribull%20-%20nutri%C3%A7%C3%A3o%20animal%20e%20agropecu%C3%A1rios%20Avenida%20Tancredo%20Neves%2C%2025%20Novo%20Oriente%20de%20Minas&output=embed"></iframe></div>
+  <div class="mapa rv" style="--d:.12s"><iframe title="Mapa" loading="lazy" src="https://www.google.com/maps?q=Avenida%20Tancredo%20Neves%2C%2025%2C%20Novo%20Oriente%20de%20Minas&z=16&output=embed"></iframe></div>
 </div></section>
 
-<section class="bloco final"><div class="c">
-  <h2>Vamos resolver isso hoje?</h2>
-  <p>Fale com a gente. A resposta é rápida.</p>
-  <a class="btn" href="tel:+553335328149"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg><span>Ligar agora</span></a>
+<section class="final"><div class="c rv">
+  <span class="olho">Nutribull - nutrição animal e agropecuários</span>
+  <h2>Será um prazer atender você.</h2>
+  <p>Ligue para a gente e venha nos conhecer em Novo Oriente de Minas.</p>
+  <a class="btn" href="tel:+553335328149"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg><span>Ligar agora</span></a>
 </div></section>
 </main>
 
 <footer><div class="c">
-  <span>© 2026 Nutribull - nutrição animal e agropecuários · Novo Oriente de Minas</span>
-  <span>Site por Vitrine Express</span>
+  <a class="marca" href="#"><i>NN</i><span>Nutribull - nutrição animal e agropecuários</span></a>
+  <div class="linha">
+    <span>© 2026 Nutribull - nutrição animal e agropecuários · Novo Oriente de Minas</span>
+    <span>Site por Vitrine Express</span>
+  </div>
 </div></footer>
 
-<a class="btn flutua" href="tel:+553335328149" aria-label="Ligar agora"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg><span>Ligar</span></a>
-<script>if(new URLSearchParams(location.search).has('print'))document.documentElement.classList.add('print')</script>
+<a class="previa-fixa" href="contratar/">Colocar no ar <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+<a class="btn flutua" href="tel:+553335328149" aria-label="Ligar agora"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg><span>Ligar</span></a>
 </body>
 </html>

@@ -3,113 +3,165 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Vitrine Express — site para o seu negócio em 24 horas</title>
-<meta name="description" content="Site profissional para negócios locais, pronto em 24 horas. Botão de contato, mapa, serviços e hospedagem inclusa. Pagamento único.">
+<title>Vitrine Express — sites de alto padrão para negócios locais</title>
+<meta name="description" content="Sites de alto padrão para negócios locais. Veja o seu pronto antes de pagar: prévia gratuita em até 24 horas, pagamento único e garantia de 7 dias.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,500;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
-:root{--fundo:#f7f6f2;--tinta:#16181d;--apagado:#5b606b;--destaque:#1747d1;--suave:#ecebe5;--linha:#dcdad1;--ok:#0f7a4d}
+:root{--fundo:#f6f3ed;--papel:#fffdf9;--tinta:#15171c;--apagado:#636873;--ouro:#9a7338;--ouro-claro:#d9b77e;--linha:#e2dccf;--ok:#1f6b4b;--curva:cubic-bezier(.2,.7,.2,1)}
 *{box-sizing:border-box;margin:0}
-body{background:var(--fundo);color:var(--tinta);font-family:Inter,system-ui,sans-serif;font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
-.c{max-width:1040px;margin:0 auto;padding:0 20px}
-h1,h2,h3{font-family:Sora,system-ui,sans-serif;letter-spacing:-.025em;line-height:1.1;text-wrap:balance}
-h1{font-size:clamp(2.3rem,8vw,4.2rem)}
-h2{font-size:clamp(1.7rem,5vw,2.6rem);margin-bottom:28px}
-header{padding:20px 0}
-header .c{display:flex;justify-content:space-between;align-items:center;gap:12px}
-.marca{font-family:Sora,sans-serif;font-weight:700;font-size:1.15rem}
-.btn{display:inline-block;background:var(--destaque);color:#fff;text-decoration:none;font-weight:600;padding:15px 26px;border-radius:12px;transition:filter .15s}
-.btn:hover{filter:brightness(1.12)}
-.btn.p{padding:9px 16px;font-size:.92rem}
-.heroi{padding:clamp(28px,6vw,64px) 0 clamp(40px,8vw,96px)}
-.selo{display:inline-block;font-size:.8rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--destaque);margin-bottom:18px}
-.heroi p{font-size:1.15rem;color:var(--apagado);max-width:36em;margin:22px 0 30px}
-.heroi small{display:block;margin-top:14px;color:var(--apagado)}
-section{padding:clamp(48px,8vw,88px) 0}
-.alt{background:var(--suave);border-block:1px solid var(--linha)}
-.passos{display:grid;gap:16px;counter-reset:p}
-.passo{background:var(--fundo);border:1px solid var(--linha);border-radius:16px;padding:24px;counter-increment:p}
-.passo::before{content:counter(p,decimal-leading-zero);font-family:Sora,sans-serif;font-weight:700;color:var(--destaque);display:block;margin-bottom:10px}
-.passo h3{font-size:1.15rem;margin-bottom:6px;letter-spacing:-.01em}
-.passo p{color:var(--apagado);font-size:.98rem}
-.inclui{list-style:none;padding:0;display:grid;gap:12px}
-.inclui li{padding-left:30px;position:relative}
-.inclui li::before{content:"";position:absolute;left:4px;top:.45em;width:12px;height:7px;border-left:2.5px solid var(--ok);border-bottom:2.5px solid var(--ok);transform:rotate(-45deg)}
-.preco{background:var(--tinta);color:#fff;border-radius:22px;padding:clamp(26px,5vw,44px);display:grid;gap:22px}
-.preco .de{color:#a9aebb;text-decoration:line-through}
-.preco .por{font-family:Sora,sans-serif;font-weight:700;font-size:clamp(2.8rem,10vw,4.2rem);line-height:1}
-.preco .por small{font-size:1rem;font-weight:500;color:#a9aebb;letter-spacing:0}
-.preco p{color:#c9cdd6}
-.preco .btn{background:#fff;color:var(--tinta);justify-self:start}
-details{border-bottom:1px solid var(--linha);padding:18px 0}
-summary{font-weight:600;cursor:pointer;font-size:1.05rem}
-details p{color:var(--apagado);margin-top:10px;max-width:42em}
-.final{text-align:center}
-.final p{color:var(--apagado);margin:-12px 0 26px}
-footer{padding:28px 0 48px;color:var(--apagado);font-size:.9rem;border-top:1px solid var(--linha)}
-@media(min-width:760px){.passos{grid-template-columns:repeat(3,1fr)}.inclui{grid-template-columns:1fr 1fr;gap:14px 32px}.duas{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:start}}
+html{scroll-behavior:smooth}
+body{background:var(--fundo);color:var(--tinta);font-family:Inter,system-ui,sans-serif;font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+.c{max-width:1120px;margin:0 auto;padding:0 22px}
+h1,h2,h3{font-family:Fraunces,Georgia,serif;font-weight:400;letter-spacing:-.025em;line-height:1.04;text-wrap:balance}
+h1{font-size:clamp(2.7rem,9.4vw,5.4rem)}
+h2{font-size:clamp(2rem,6vw,3.3rem);margin-bottom:18px}
+h1 em,h2 em{font-style:italic;color:var(--ouro)}
+.olho{display:inline-flex;gap:12px;align-items:center;font-size:.72rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--ouro)}
+.olho::before{content:"";width:34px;height:1px;background:currentColor}
+header{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--fundo) 86%,transparent);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid color-mix(in srgb,var(--linha) 70%,transparent)}
+header .c{display:flex;justify-content:space-between;align-items:center;gap:12px;min-height:68px}
+.marca{font-family:Fraunces,serif;font-weight:500;font-size:1.25rem;letter-spacing:-.01em}
+.btn{display:inline-flex;align-items:center;justify-content:center;background:var(--tinta);color:#fff;text-decoration:none;font-weight:600;padding:17px 30px;border-radius:999px;transition:transform .3s var(--curva),box-shadow .3s var(--curva);box-shadow:0 20px 34px -20px rgba(21,23,28,.75)}
+.btn:hover{transform:translateY(-2px);box-shadow:0 26px 40px -20px rgba(21,23,28,.75)}
+.btn.p{padding:11px 20px;font-size:.9rem;box-shadow:none}
+.btn.claro{background:#fff;color:var(--tinta)}
+.heroi{position:relative;padding:clamp(48px,9vw,112px) 0 clamp(52px,9vw,112px);overflow:hidden}
+.heroi::before{content:"";position:absolute;top:-30%;right:-20%;width:min(90vw,900px);aspect-ratio:1;border-radius:50%;background:radial-gradient(closest-side,color-mix(in srgb,var(--ouro) 20%,transparent),transparent);pointer-events:none}
+.heroi .c{position:relative}
+.heroi h1{margin:22px 0 0;max-width:11em}
+.heroi p{font-size:clamp(1.08rem,2.8vw,1.28rem);color:var(--apagado);max-width:33em;margin:26px 0 34px}
+.heroi small{display:block;margin-top:16px;color:var(--apagado);font-size:.92rem}
+section{padding:clamp(60px,10vw,120px) 0}
+.alt{background:var(--papel);border-block:1px solid var(--linha)}
+.cab{max-width:40em;margin-bottom:clamp(30px,5vw,52px)}
+.cab p{color:var(--apagado);margin-top:4px}
+.vitrine{display:grid;grid-template-columns:repeat(2,1fr);gap:18px 14px}
+.vitrine a{text-decoration:none;color:inherit;display:grid;gap:12px;transition:transform .4s var(--curva)}
+.vitrine a:hover{transform:translateY(-6px)}
+.vitrine img{width:100%;border-radius:18px;display:block;box-shadow:0 30px 50px -34px rgba(21,23,28,.55)}
+.vitrine b{font-family:Fraunces,serif;font-weight:500;font-size:1.08rem;letter-spacing:-.01em}
+.vitrine span{display:block;font-size:.72rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--apagado)}
+.aviso{margin-top:24px;font-size:.88rem;color:var(--apagado)}
+.tres{display:grid;gap:0;border-top:1px solid var(--linha)}
+.tres>div{padding:28px 0;border-bottom:1px solid var(--linha);display:grid;gap:8px}
+.tres i{font-family:Fraunces,serif;font-style:normal;color:var(--ouro);font-size:1.1rem}
+.tres h3{font-size:1.5rem;letter-spacing:-.02em}
+.tres p{color:var(--apagado);font-size:1rem;max-width:30em}
+.inclui{list-style:none;padding:0;display:grid;gap:14px}
+.inclui li{padding-left:32px;position:relative}
+.inclui li::before{content:"";position:absolute;left:4px;top:.5em;width:12px;height:7px;border-left:2px solid var(--ok);border-bottom:2px solid var(--ok);transform:rotate(-45deg)}
+.duas{display:grid;gap:40px}
+.preco{position:relative;overflow:hidden;background:var(--tinta);color:#fff;border-radius:28px;padding:clamp(28px,5vw,48px);display:grid;gap:20px;box-shadow:0 50px 80px -50px rgba(21,23,28,.8)}
+.preco::before{content:"";position:absolute;inset:0;background:repeating-radial-gradient(circle at 100% 0,transparent 0 54px,rgba(255,255,255,.06) 54px 55px);pointer-events:none}
+.preco>*{position:relative}
+.preco .olho{color:var(--ouro-claro)}
+.preco .de{color:#a9aebb;text-decoration:line-through;font-size:.95rem}
+.preco .por{font-family:Fraunces,serif;font-weight:400;font-size:clamp(3.2rem,11vw,4.8rem);line-height:1;letter-spacing:-.035em}
+.preco p{color:#c9cdd6;font-size:.98rem}
+.preco p b{color:#fff;font-weight:600}
+.preco .btn{justify-self:start}
+details{border-bottom:1px solid var(--linha);padding:20px 0}
+details:first-of-type{border-top:1px solid var(--linha)}
+summary{font-weight:600;cursor:pointer;font-size:1.05rem;list-style:none;display:flex;justify-content:space-between;gap:16px}
+summary::after{content:"+";font-family:Fraunces,serif;font-size:1.4rem;line-height:1;color:var(--ouro)}
+details[open] summary::after{content:"–"}
+summary::-webkit-details-marker{display:none}
+details p{color:var(--apagado);margin-top:12px;max-width:42em}
+.final{text-align:center;background:var(--tinta);color:#fff;position:relative;overflow:hidden}
+.final::before{content:"";position:absolute;inset:0;background:repeating-radial-gradient(circle at 50% 120%,transparent 0 64px,rgba(255,255,255,.07) 64px 65px)}
+.final .c{position:relative;display:grid;justify-items:center;gap:18px}
+.final h2{margin:0;max-width:13em}
+.final h2 em{color:var(--ouro-claro)}
+.final p{color:#c9cdd6;max-width:30em}
+footer{padding:30px 0 50px;color:var(--apagado);font-size:.9rem}
+@media(min-width:760px){.vitrine{grid-template-columns:repeat(4,1fr);gap:22px}.tres{grid-template-columns:repeat(3,1fr);border-bottom:1px solid var(--linha)}.tres>div{border-bottom:0;padding:34px 30px 34px 0}.tres>div+div{padding-left:30px;border-left:1px solid var(--linha)}.inclui{grid-template-columns:1fr 1fr;gap:16px 32px}}
+@media(min-width:940px){.duas{grid-template-columns:1.1fr .9fr;gap:64px;align-items:start}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn,.vitrine a{transition:none}}
 </style>
 </head>
 <body>
-<header><div class="c"><span class="marca">Vitrine Express</span></div></header>
+<header><div class="c"><span class="marca">Vitrine Express</span><a class="btn p" href="mailto:vitrinexpress.contato@gmail.com?subject=Quero%20uma%20pr%C3%A9via%20do%20meu%20site&amp;body=Quero%20ver%20uma%20pr%C3%A9via%20do%20site%20do%20meu%20neg%C3%B3cio.%0A%0ANome%20do%20neg%C3%B3cio%3A%0AO%20que%20voc%C3%AAs%20fazem%3A%0ACidade%20e%20bairro%3A%0ATelefone%20de%20atendimento%3A%0AHor%C3%A1rio%20de%20funcionamento%3A">Solicitar prévia</a></div></header>
 
 <section class="heroi"><div class="c">
-  <span class="selo">Para negócios locais</span>
-  <h1>Seu negócio com site profissional em 24 horas.</h1>
-  <p>Quem procura no Google precisa te achar, confiar e entrar em contato. A gente monta o site inteiro para você — você só manda as informações e as fotos por e-mail.</p>
-  
-  <small>A prévia é gratuita. Você só paga se gostar.</small>
+  <span class="olho">Sites para negócios locais</span>
+  <h1>O seu negócio merece ser a <em>primeira escolha.</em></h1>
+  <p>Desenhamos sites de alto padrão para negócios locais. Você vê o seu pronto antes de pagar, e só publica se aprovar.</p>
+  <a class="btn " href="mailto:vitrinexpress.contato@gmail.com?subject=Quero%20uma%20pr%C3%A9via%20do%20meu%20site&amp;body=Quero%20ver%20uma%20pr%C3%A9via%20do%20site%20do%20meu%20neg%C3%B3cio.%0A%0ANome%20do%20neg%C3%B3cio%3A%0AO%20que%20voc%C3%AAs%20fazem%3A%0ACidade%20e%20bairro%3A%0ATelefone%20de%20atendimento%3A%0AHor%C3%A1rio%20de%20funcionamento%3A">Solicitar minha prévia gratuita</a>
+  <small>Prévia gratuita em até 24 horas. Sem compromisso.</small>
+</div></section>
+
+<section class="alt" id="modelos"><div class="c">
+  <div class="cab"><span class="olho">Padrão do trabalho</span><h2>Cada segmento com a sua <em>identidade.</em></h2><p>Cores, tipografia e textos pensados para o tipo de negócio. Toque em um modelo para navegar por ele.</p></div>
+  <div class="vitrine">
+    <a href="modelos/modelo-barbearia/"><img src="modelos/modelo-barbearia/print.png" alt="Modelo de site para barbearia" loading="lazy" width="1040" height="1840" style="height:auto"><div><span>Barbearia</span><b>Barbearia Aurora</b></div></a>
+    <a href="modelos/modelo-salao/"><img src="modelos/modelo-salao/print.png" alt="Modelo de site para salão de beleza" loading="lazy" width="1040" height="1840" style="height:auto"><div><span>Salão de beleza</span><b>Atelier Serena</b></div></a>
+    <a href="modelos/modelo-estetica/"><img src="modelos/modelo-estetica/print.png" alt="Modelo de site para clínica de estética" loading="lazy" width="1040" height="1840" style="height:auto"><div><span>Clínica de estética</span><b>Clínica Vitta</b></div></a>
+    <a href="modelos/modelo-veterinaria/"><img src="modelos/modelo-veterinaria/print.png" alt="Modelo de site para clínica veterinária" loading="lazy" width="1040" height="1840" style="height:auto"><div><span>Clínica veterinária</span><b>Vet Quintal</b></div></a>
+  </div>
+  <p class="aviso">Modelos demonstrativos, com negócios fictícios. A sua prévia é montada com os dados do seu negócio.</p>
+</div></section>
+
+<section><div class="c">
+  <div class="cab"><span class="olho">Por que ter um site próprio</span><h2>A primeira visita acontece <em>no celular.</em></h2></div>
+  <div class="tres">
+    <div><i>01</i><h3>Primeira impressão</h3><p>Antes de ir até você, o cliente pesquisa. Uma página bem apresentada transmite o mesmo cuidado que você tem com o seu trabalho.</p></div>
+    <div><i>02</i><h3>Tudo em um lugar</h3><p>Serviços, preços, horário, localização e contato a um toque, sem depender só de rede social.</p></div>
+    <div><i>03</i><h3>Um endereço que é seu</h3><p>Um link para o perfil do Google, a bio do Instagram e o cartão de visita.</p></div>
+  </div>
 </div></section>
 
 <section class="alt"><div class="c">
-  <h2>Como funciona</h2>
-  <div class="passos">
-    <div class="passo"><h3>Você pede a prévia</h3><p>Diz o nome do negócio e o que você faz. Leva dois minutos.</p></div>
-    <div class="passo"><h3>Recebe o link</h3><p>Montamos o site com o seu nome, serviços e endereço para você ver no celular antes de decidir.</p></div>
-    <div class="passo"><h3>Paga e vai ao ar</h3><p>Gostou, paga por Pix na página da prévia e o site é publicado em até 24 horas.</p></div>
+  <div class="cab"><span class="olho">Como funciona</span><h2>Três passos. <em>Nenhuma complicação.</em></h2></div>
+  <div class="tres">
+    <div><i>01</i><h3>Você solicita a prévia</h3><p>Informe o nome do negócio e o que você faz. Leva dois minutos.</p></div>
+    <div><i>02</i><h3>Recebe o link</h3><p>Montamos o site com o seu nome, os seus serviços e o seu endereço para você ver no celular antes de decidir.</p></div>
+    <div><i>03</i><h3>Aprova e vai ao ar</h3><p>O pagamento é feito por Pix na página da prévia e o site é publicado em até 24 horas.</p></div>
   </div>
 </div></section>
 
 <section><div class="c duas">
   <div>
-    <h2>O que vem no site</h2>
-    <ul class="inclui">
+    <span class="olho">O que está incluído</span>
+    <h2 style="margin-top:16px">Completo, <em>do primeiro dia.</em></h2>
+    <ul class="inclui" style="margin-top:28px">
+      <li>Design desenvolvido para o seu segmento</li>
       <li>Página feita para celular, rápida de abrir</li>
       <li>Botão de contato em todas as telas</li>
       <li>Serviços, preços e fotos do seu trabalho</li>
       <li>Mapa, endereço e horário de funcionamento</li>
-      <li>Hospedagem inclusa por 12 meses</li>
-      <li>Estrutura pronta para aparecer no Google</li>
+      <li>Estrutura pronta para o Google ler</li>
+      <li>Hospedagem incluída por 12 meses</li>
       <li>Ajustes por mensagem nos primeiros 30 dias</li>
-      <li>Garantia de 7 dias</li>
     </ul>
   </div>
   <div class="preco">
-    <div><span class="de">De R$ 397</span><div class="por">R$ 197 <small>pagamento único</small></div></div>
-    <p>Condição de lançamento válida até 30/11/2026. Sem mensalidade.</p>
-    <p><strong style="color:#fff">Garantia de 7 dias:</strong> não gostou, devolvemos o valor.</p>
-    
+    <span class="olho">Investimento</span>
+    <div><span class="de">Valor de tabela: R$ 5.997</span><div class="por">R$ 1.497</div></div>
+    <p><b>Pagamento único, sem mensalidade.</b> Condição válida até 30/11/2026.</p>
+    <p><b>Garantia de 7 dias:</b> se não ficar satisfeito depois da publicação, devolvemos o valor integral.</p>
+    <a class="btn claro" href="mailto:vitrinexpress.contato@gmail.com?subject=Quero%20uma%20pr%C3%A9via%20do%20meu%20site&amp;body=Quero%20ver%20uma%20pr%C3%A9via%20do%20site%20do%20meu%20neg%C3%B3cio.%0A%0ANome%20do%20neg%C3%B3cio%3A%0AO%20que%20voc%C3%AAs%20fazem%3A%0ACidade%20e%20bairro%3A%0ATelefone%20de%20atendimento%3A%0AHor%C3%A1rio%20de%20funcionamento%3A">Solicitar minha prévia gratuita</a>
   </div>
 </div></section>
 
 <section class="alt"><div class="c">
-  <h2>Perguntas frequentes</h2>
-  <details><summary>Preciso entender de tecnologia?</summary><p>Não. Você manda as informações por e-mail (fotos, serviços, horário) e recebe o site pronto. As alterações também são pedidas por mensagem.</p></details>
-  <details><summary>Em quanto tempo fica pronto?</summary><p>A prévia chega em até 24 horas. Depois do pagamento, o site vai ao ar em até 24 horas — normalmente no mesmo dia.</p></details>
+  <div class="cab"><span class="olho">Dúvidas</span><h2>Perguntas frequentes</h2></div>
+  <details><summary>Preciso entender de tecnologia?</summary><p>Não. Você envia as informações por e-mail (fotos, serviços, horário) e recebe o site pronto. As alterações também são pedidas por mensagem.</p></details>
+  <details><summary>Em quanto tempo fica pronto?</summary><p>A prévia chega em até 24 horas. Depois do pagamento, o site vai ao ar em até 24 horas.</p></details>
   <details><summary>Tem mensalidade?</summary><p>Não. O valor do site é pagamento único e inclui 12 meses de hospedagem. Depois disso, a renovação é de R$ 97 por ano, sem cobrança automática.</p></details>
   <details><summary>Qual será o endereço do site?</summary><p>O site fica em my-ticket-tech.github.io/vitrine-express/nome-do-seu-negocio. Você pode usar esse link no perfil do Google e na bio do Instagram.</p></details>
-  <details><summary>O site aparece no Google?</summary><p>Ele é rápido, feito para celular e traz os dados do negócio marcados do jeito que o Google lê. Posição na busca depende de concorrência e tempo — ninguém pode prometer primeiro lugar.</p></details>
-  <details><summary>E se eu não gostar?</summary><p>Você vê a prévia antes de pagar e tem 7 dias depois da entrega para pedir o dinheiro de volta.</p></details>
-  <details><summary>Como é o pagamento?</summary><p>Pix, pela página de contratação da sua prévia.</p></details>
+  <details><summary>O site aparece no Google?</summary><p>Ele é rápido, feito para celular e traz os dados do negócio marcados do jeito que o Google lê. A posição na busca depende de concorrência e de tempo: ninguém pode prometer primeiro lugar.</p></details>
+  <details><summary>E se eu não gostar?</summary><p>Você vê a prévia antes de pagar e tem 7 dias depois da entrega para pedir a devolução integral do valor.</p></details>
+  <details><summary>Como é o pagamento?</summary><p>Por Pix, na página de contratação da sua prévia.</p></details>
 </div></section>
 
 <section class="final"><div class="c">
-  <h2>Veja seu site antes de pagar qualquer coisa.</h2>
-  <p>Peça a prévia por e-mail e receba o link em até 24 horas.</p>
-  
+  <h2>Veja o seu site antes de <em>pagar qualquer coisa.</em></h2>
+  <p>Solicite a prévia por e-mail e receba o link em até 24 horas.</p>
+  <a class="btn claro" href="mailto:vitrinexpress.contato@gmail.com?subject=Quero%20uma%20pr%C3%A9via%20do%20meu%20site&amp;body=Quero%20ver%20uma%20pr%C3%A9via%20do%20site%20do%20meu%20neg%C3%B3cio.%0A%0ANome%20do%20neg%C3%B3cio%3A%0AO%20que%20voc%C3%AAs%20fazem%3A%0ACidade%20e%20bairro%3A%0ATelefone%20de%20atendimento%3A%0AHor%C3%A1rio%20de%20funcionamento%3A">Solicitar prévia</a>
 </div></section>
 
-<footer><div class="c">© 2026 Vitrine Express</div></footer>
+<footer><div class="c">© 2026 Vitrine Express · vitrinexpress.contato@gmail.com</div></footer>
 </body>
 </html>
