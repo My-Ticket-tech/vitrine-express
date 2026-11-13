@@ -1,6 +1,6 @@
 <!doctype html>
 <!-- Prévia de propriedade de Vitrine Express. Reprodução ou publicação sem contratação não é autorizada. Ref. mwe59cvbeosi -->
-<html lang="pt-BR">
+<html lang="pt-BR" data-estilo="a">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -17,7 +17,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,500;1,400&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"LocalBusiness","name":"Casa De Lego Mototaxi","telephone":"+5573981536990","address":{"@type":"PostalAddress","streetAddress":"Rua Joana Angelica, 32","addressLocality":"Porto Seguro","addressCountry":"BR"},"openingHours":"Aberto 24 horas"}</script>
-<script>(function(){var d=document.documentElement;if(new URLSearchParams(location.search).has('print')){d.classList.add('print');return}if(!('IntersectionObserver' in window)||matchMedia('(prefers-reduced-motion: reduce)').matches)return;d.classList.add('anima');addEventListener('DOMContentLoaded',function(){var o=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');o.unobserve(e.target)}})},{rootMargin:'0px 0px -6% 0px',threshold:.06});document.querySelectorAll('.rv').forEach(function(el){o.observe(el)})})})()</script>
+<script>(function(){var d=document.documentElement;var e=new URLSearchParams(location.search).get('estilo');if(/^[abc]$/.test(e||''))d.setAttribute('data-estilo',e);if(new URLSearchParams(location.search).has('print')){d.classList.add('print');return}if(!('IntersectionObserver' in window)||matchMedia('(prefers-reduced-motion: reduce)').matches)return;d.classList.add('anima');addEventListener('DOMContentLoaded',function(){var o=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');o.unobserve(e.target)}})},{rootMargin:'0px 0px -6% 0px',threshold:.06});document.querySelectorAll('.rv').forEach(function(el){o.observe(el)})})})()</script>
 <style>
 :root{--fundo:#f7f4ee;--tinta:#22281f;--destaque:#3c5a3e;--sobre:#ffffff;--suave:#ece7dc;--linha:#d9d2c2;
 --apagado:color-mix(in srgb,var(--tinta) 66%,var(--fundo));--titulo:'Fraunces',Georgia,serif;--texto:'DM Sans',system-ui,sans-serif;
@@ -147,10 +147,68 @@ footer .linha{display:flex;gap:10px 28px;flex-wrap:wrap;justify-content:space-be
   .emblema{justify-self:end}
 }
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn,.lnk,.serv{transition:none}}
+
+/* Seletor de estilo e central de dúvidas (só na prévia) */
+.estilos{display:inline-flex;align-items:center;gap:6px;font-size:12px;letter-spacing:.08em;text-transform:uppercase;opacity:.95}
+.estilos button,.previa .ajuda{font:600 12.5px var(--texto);color:var(--fundo);background:transparent;border:1px solid color-mix(in srgb,var(--fundo) 45%,transparent);border-radius:999px;min-width:30px;height:28px;padding:0 10px;cursor:pointer}
+.estilos button[aria-pressed="true"]{background:var(--fundo);color:var(--tinta);border-color:var(--fundo)}
+.print .estilos,.print .ajuda{display:none}
+dialog.duvidas{margin:auto;border:0;border-radius:20px;padding:0;width:min(560px,calc(100vw - 28px));max-height:86vh;background:#fffdf9;color:#15171c;box-shadow:0 40px 90px -30px rgba(0,0,0,.6);font-family:var(--texto)}
+dialog.duvidas::backdrop{background:rgba(10,12,16,.55);backdrop-filter:blur(3px)}
+.duvidas .topo{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:20px 22px 12px;position:sticky;top:0;background:#fffdf9}
+.duvidas .topo b{font-size:1.15rem}
+.duvidas .topo button{border:0;background:#efebe2;border-radius:999px;width:34px;height:34px;font-size:18px;cursor:pointer;color:#15171c}
+.duvidas .corpo{padding:0 22px 22px}
+.duvidas details{border-bottom:1px solid #e6e0d3;padding:14px 0}
+.duvidas summary{font-weight:600;cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:14px}
+.duvidas summary::after{content:"+";color:#9a7338;font-size:1.2rem;line-height:1}
+.duvidas details[open] summary::after{content:"–"}
+.duvidas summary::-webkit-details-marker{display:none}
+.duvidas details p{color:#555a64;margin-top:8px;font-size:.97rem}
+.duvidas .fim{margin-top:16px;font-size:.93rem;color:#555a64}
+.duvidas .fim a{color:#15171c;font-weight:600}
+
+/* Estilo B — Contraste: inverte claro e escuro, emblema à esquerda, serviços em cartões */
+html[data-estilo="b"]{--fundo:#22281f;--tinta:#f7f4ee;--suave:color-mix(in srgb,#22281f 90%,#f7f4ee);--linha:color-mix(in srgb,#22281f 76%,#f7f4ee);--destaque:color-mix(in srgb,#3c5a3e 48%,#fff);--sobre:#22281f}
+html[data-estilo="b"] .emblema{border-radius:36px}
+html[data-estilo="b"] .faixa{background:var(--suave)}
+html[data-estilo="b"] .lista{border-top:0;gap:14px}
+html[data-estilo="b"] .serv{background:var(--suave);border:1px solid var(--linha);border-radius:20px;padding:24px;grid-template-columns:1fr auto;transition:transform .4s var(--curva),border-color .4s}
+html[data-estilo="b"] .serv .num{grid-column:1/-1;margin-bottom:6px}
+html[data-estilo="b"] .serv p{grid-column:1/-1}
+html[data-estilo="b"] .sobre{background:var(--fundo)}
+html[data-estilo="b"] .sobre .c{border-left:2px solid var(--destaque);padding-left:clamp(20px,4vw,40px)}
+@media(hover:hover){html[data-estilo="b"] .serv:hover{padding-left:24px;transform:translateY(-4px);border-color:var(--destaque)}}
+@media(min-width:900px){html[data-estilo="b"] .lista{grid-template-columns:repeat(3,1fr);column-gap:14px}}
+@media(min-width:980px){html[data-estilo="b"] .heroi .c{grid-template-columns:.8fr 1.2fr}html[data-estilo="b"] .emblema{order:-1;justify-self:start}}
+
+/* Estilo C — Minimal: tipografia sem serifa, linhas finas, sem texturas, ficha em faixa */
+html[data-estilo="c"]{--raio:12px;--titulo:var(--texto)}
+html[data-estilo="c"] body::after,html[data-estilo="c"] .heroi::before,html[data-estilo="c"] .final::before{display:none}
+html[data-estilo="c"] h1,html[data-estilo="c"] h2,html[data-estilo="c"] h3{font-weight:600;letter-spacing:-.045em;line-height:1.02}
+html[data-estilo="c"] h1{font-size:clamp(2.7rem,10.5vw,6.2rem);max-width:12em}
+html[data-estilo="c"] h2{font-size:clamp(1.9rem,5.6vw,3.1rem)}
+html[data-estilo="c"] h1 em,html[data-estilo="c"] h2 em{font-style:normal}
+html[data-estilo="c"] .serv h3{font-size:clamp(1.15rem,3.4vw,1.4rem);letter-spacing:-.02em}
+html[data-estilo="c"] .btn,html[data-estilo="c"] .previa-fixa{border-radius:12px;box-shadow:none}
+html[data-estilo="c"] .marca i{border-radius:10px}
+html[data-estilo="c"] .marca span{font-size:1.08rem;letter-spacing:-.02em}
+html[data-estilo="c"] .heroi .c{grid-template-columns:1fr;gap:44px}
+html[data-estilo="c"] .emblema{aspect-ratio:auto;max-width:none;justify-self:stretch;border-radius:var(--raio);background:transparent;color:var(--tinta);box-shadow:none;border-block:1px solid var(--linha);overflow:visible}
+html[data-estilo="c"] .emblema .aneis,html[data-estilo="c"] .emblema .mono,html[data-estilo="c"] .emblema .leg{display:none}
+html[data-estilo="c"] .emblema.foto{aspect-ratio:16/9;overflow:hidden;border:0}
+html[data-estilo="c"] .emblema:not(.foto):not(:has(.ficha)){display:none}
+html[data-estilo="c"] .emblema:not(.foto) .ficha{position:static;background:transparent;box-shadow:none;backdrop-filter:none;-webkit-backdrop-filter:none;padding:0;border-radius:0}
+html[data-estilo="c"] .sobre{background:var(--fundo)}
+html[data-estilo="c"] .sobre blockquote{font-weight:500}
+html[data-estilo="c"] .final{background:var(--tinta);color:var(--fundo)}
+html[data-estilo="c"] .final .btn{background:var(--fundo);color:var(--tinta)}
+html[data-estilo="c"] .mapa{box-shadow:none;border:1px solid var(--linha)}
+@media(min-width:760px){html[data-estilo="c"] .emblema:not(.foto) .ficha{display:grid;grid-template-columns:repeat(3,1fr)}html[data-estilo="c"] .emblema:not(.foto) .ficha div{border-bottom:0;padding:20px 24px 20px 0;flex-direction:column;gap:4px}html[data-estilo="c"] .emblema:not(.foto) .ficha div+div{border-left:1px solid var(--linha);padding-left:24px}html[data-estilo="c"] .emblema:not(.foto) .ficha b{text-align:left}}
 </style>
 </head>
 <body>
-<div class="previa"><div class="c"><span><b>Prévia</b>Este site ainda não está no ar.</span><a href="contratar/">Colocar no ar</a></div></div>
+<div class="previa"><div class="c"><span><b>Prévia</b>Este site ainda não está no ar.</span><span class="estilos">Estilo <button type="button" data-e="a" aria-label="Estilo 1, Assinatura">1</button><button type="button" data-e="b" aria-label="Estilo 2, Contraste">2</button><button type="button" data-e="c" aria-label="Estilo 3, Minimal">3</button></span><button type="button" class="ajuda" id="abrirDuvidas">Dúvidas</button><a href="contratar/">Colocar no ar</a></div></div>
 <header class="topo"><div class="c">
   <a class="marca" href="#"><i>CL</i><span>Casa De Lego Mototaxi</span></a>
   <nav class="menu" aria-label="Seções"><a href="#servicos">Serviços</a><a href="#sobre">Sobre</a><a href="#onde">Contato</a></nav>
@@ -234,6 +292,19 @@ footer .linha{display:flex;gap:10px 28px;flex-wrap:wrap;justify-content:space-be
 </div></footer>
 
 <a class="previa-fixa" href="contratar/">Colocar no ar <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+<dialog class="duvidas" id="duvidas" aria-label="Dúvidas frequentes">
+  <div class="topo"><b>Dúvidas frequentes</b><button type="button" id="fecharDuvidas" aria-label="Fechar">×</button></div>
+  <div class="corpo">
+    <details><summary>Quanto custa?</summary><p>R$ 749, em pagamento único por Pix, sem mensalidade. Inclui 12 meses de hospedagem; depois, a renovação é de R$ 97 por ano, e só se você quiser.</p></details>
+    <details><summary>O que está incluído?</summary><p>O site com os seus textos, serviços, preços e fotos; botão de contato, mapa e horário; hospedagem por 12 meses; e ajustes por e-mail durante 30 dias.</p></details>
+    <details><summary>Posso mudar o visual e os textos?</summary><p>Sim. No topo desta página há três estilos de layout para escolher, e todos os textos e fotos são trocados pelos seus.</p></details>
+    <details><summary>E se eu não gostar?</summary><p>Você tem 7 dias depois da publicação para pedir a devolução integral do valor.</p></details>
+    <details><summary>É seguro pagar?</summary><p>Você vê o site antes de pagar. O aplicativo do banco mostra o nome do recebedor antes de confirmar o Pix, e o site é publicado em até 1 dia útil após o pagamento.</p></details>
+    <details><summary>Já tenho Instagram. Preciso de site?</summary><p>O Instagram continua importante. O site é o endereço fixo do negócio: serviços, preços, horário, mapa e contato em um lugar só. É o link que vai na bio e no perfil do Google.</p></details>
+    <p class="fim">Não achou a resposta? Responda o e-mail que você recebeu ou <a href="https://wa.me/5562998307210?text=Ol%C3%A1!%20Estou%20vendo%20a%20pr%C3%A9via%20do%20site%20de%20Casa%20De%20Lego%20Mototaxi%20e%20tenho%20uma%20d%C3%BAvida.">fale com uma pessoa no WhatsApp</a>.</p>
+  </div>
+</dialog>
+<script>(function(){var d=document.documentElement,bs=document.querySelectorAll('.estilos button');function marcar(){var e=d.getAttribute('data-estilo')||'a';bs.forEach(function(b){b.setAttribute('aria-pressed',String(b.dataset.e===e))});document.querySelectorAll('a[href*="contratar"]').forEach(function(a){a.href=a.href.split('?')[0]+(e==='a'?'':'?estilo='+e)})}bs.forEach(function(b){b.addEventListener('click',function(){d.setAttribute('data-estilo',b.dataset.e);try{history.replaceState(null,'',b.dataset.e==='a'?location.pathname:'?estilo='+b.dataset.e)}catch(x){}marcar()})});marcar();var dg=document.getElementById('duvidas'),ab=document.getElementById('abrirDuvidas'),fe=document.getElementById('fecharDuvidas');if(dg&&ab&&dg.showModal){ab.addEventListener('click',function(){dg.showModal()});fe.addEventListener('click',function(){dg.close()});dg.addEventListener('click',function(ev){if(ev.target===dg)dg.close()})}else if(ab){ab.style.display='none'}})()</script>
 <a class="btn flutua" href="https://wa.me/5573981536990?text=Ol%C3%A1!%20Vi%20o%20site%20e%20gostaria%20de%20consultar%20datas%20e%20valores." aria-label="Consultar datas"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg><span>WhatsApp</span></a>
 </body>
 </html>

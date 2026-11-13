@@ -141,6 +141,14 @@ document.getElementById('copiar').addEventListener('click', async function () {
   try { await navigator.clipboard.writeText(t.value); } catch (e) { document.execCommand('copy'); }
   this.textContent = 'Código copiado'; var b = this; setTimeout(function () { b.textContent = 'Copiar código Pix'; }, 2500);
 });
+// Estilo de layout escolhido na prévia (1, 2 ou 3): vai junto no e-mail do comprovante e no link de volta.
+(function () {
+  var e = new URLSearchParams(location.search).get('estilo'), n = { b: '2 (Contraste)', c: '3 (Minimal)' }[e];
+  if (!n) return;
+  document.querySelectorAll('a[href^="mailto:"]').forEach(function (a) { a.href = a.href.replace('&body=', '&body=' + encodeURIComponent('Estilo escolhido: ' + n + String.fromCharCode(10, 10))); });
+  var v = document.querySelector('header a'); if (v) v.href = '../?estilo=' + e;
+  var s = document.querySelector('.sub'); if (s) s.insertAdjacentHTML('afterend', '<p class="nota" style="margin:-22px 0 30px">Estilo de layout escolhido: <b>' + n + '</b>. Ele será aplicado na publicação.</p>');
+})();
 </script>
 </body>
 </html>
