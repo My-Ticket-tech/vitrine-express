@@ -1,0 +1,27 @@
+{
+ "marca": "Vitrine Express",
+ "preco": "R$ 749 em pagamento único por Pix, sem mensalidade",
+ "valorDeTabela": "R$ 4.799",
+ "condicaoValidaAte": "30/11/2027",
+ "renovacao": "R$ 97 por ano depois dos primeiros 12 meses, só se o cliente quiser",
+ "inclui": [
+  "site de uma página com os textos, serviços, preços e fotos do cliente",
+  "três estilos de layout para escolher no topo da prévia",
+  "botão de contato, mapa e horário",
+  "hospedagem por 12 meses",
+  "ajustes por e-mail durante 30 dias"
+ ],
+ "naoInclui": [
+  "domínio próprio",
+  "novas páginas",
+  "gestão de redes sociais ou anúncios"
+ ],
+ "garantia": "7 dias depois da publicação, com devolução integral",
+ "comoContratar": "botão \"Colocar no ar\" na prévia: paga o Pix, envia o comprovante por e-mail e o site é publicado em até 1 dia útil depois que o pagamento é confirmado",
+ "seguranca": "o cliente vê o site antes de pagar e o aplicativo do banco mostra o nome do recebedor antes de confirmar",
+ "reservaDaPrevia": "15 dias a partir do primeiro e-mail",
+ "contato": {
+  "email": "vitrinexpress.contato@gmail.com",
+  "whatsapp": "62998307210"
+ }
+}

@@ -4,7 +4,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; script-src 'unsafe-inline'; frame-src https://www.google.com; base-uri 'none'; form-action 'none'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: https://vitrine-express.glowapp.workers.dev; script-src 'unsafe-inline'; frame-src https://www.google.com; connect-src https://vitrine-express.glowapp.workers.dev; base-uri 'none'; form-action 'none'">
 <meta name="referrer" content="strict-origin-when-cross-origin">
 <title>London Beauty — Fortaleza</title>
 <meta name="description" content="London Beauty — Clínica de estética em Fortaleza. Cuidado de verdade para a sua pele.">
@@ -148,6 +148,12 @@ footer .linha{display:flex;gap:10px 28px;flex-wrap:wrap;justify-content:space-be
 }
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn,.lnk,.serv{transition:none}}
 
+/* Logo do negócio */
+.marca img.logo{flex:none;height:40px;width:auto;max-width:150px;object-fit:contain;border-radius:6px}
+.emblema .placa{position:absolute;left:50%;top:13%;transform:translateX(-50%);width:64%;aspect-ratio:1.5;background:#fff;border-radius:22px;display:grid;place-items:center;padding:20px;box-shadow:0 22px 44px -20px rgba(0,0,0,.5)}
+.emblema .placa img{position:static;width:auto;height:auto;max-width:100%;max-height:100%;object-fit:contain}
+html[data-estilo="c"] .emblema .placa{display:none}
+
 /* Seletor de estilo e central de dúvidas (só na prévia) */
 .estilos{display:inline-flex;align-items:center;gap:6px;font-size:12px;letter-spacing:.08em;text-transform:uppercase;opacity:.95}
 .estilos button,.previa .ajuda{font:600 12.5px var(--texto);color:var(--fundo);background:transparent;border:1px solid color-mix(in srgb,var(--fundo) 45%,transparent);border-radius:999px;min-width:30px;height:28px;padding:0 10px;cursor:pointer}
@@ -165,6 +171,15 @@ dialog.duvidas::backdrop{background:rgba(10,12,16,.55);backdrop-filter:blur(3px)
 .duvidas details[open] summary::after{content:"–"}
 .duvidas summary::-webkit-details-marker{display:none}
 .duvidas details p{color:#555a64;margin-top:8px;font-size:.97rem}
+.duvidas .chat{margin-top:18px;padding-top:16px;border-top:1px solid #e6e0d3}
+.duvidas .chat .rot{font-weight:600;margin-bottom:10px}
+.duvidas .bolha{padding:10px 14px;border-radius:14px;margin:0 0 8px;font-size:.96rem;max-width:88%;white-space:pre-wrap}
+.duvidas .bolha.cliente{background:#15171c;color:#fff;margin-left:auto;width:fit-content}
+.duvidas .bolha.assistente{background:#efebe2;color:#15171c;width:fit-content}
+.duvidas form{display:flex;gap:8px;margin-top:6px}
+.duvidas form input{flex:1;min-width:0;font:inherit;padding:11px 14px;border:1px solid #d9d2c2;border-radius:12px;background:#fff;color:#15171c}
+.duvidas form button{font:600 .95rem var(--texto);border:0;border-radius:12px;padding:0 18px;background:#15171c;color:#fff;cursor:pointer}
+.duvidas form button:disabled{opacity:.5}
 .duvidas .fim{margin-top:16px;font-size:.93rem;color:#555a64}
 .duvidas .fim a{color:#15171c;font-weight:600}
 
@@ -301,10 +316,23 @@ html[data-estilo="c"] .mapa{box-shadow:none;border:1px solid var(--linha)}
     <details><summary>E se eu não gostar?</summary><p>Você tem 7 dias depois da publicação para pedir a devolução integral do valor.</p></details>
     <details><summary>É seguro pagar?</summary><p>Você vê o site antes de pagar. O aplicativo do banco mostra o nome do recebedor antes de confirmar o Pix, e o site é publicado em até 1 dia útil após o pagamento.</p></details>
     <details><summary>Já tenho Instagram. Preciso de site?</summary><p>O Instagram continua importante. O site é o endereço fixo do negócio: serviços, preços, horário, mapa e contato em um lugar só. É o link que vai na bio e no perfil do Google.</p></details>
+    <div class="chat" id="chat" hidden>
+      <p class="rot">Outra dúvida? Pergunte ao assistente virtual</p>
+      <div id="chatLog" aria-live="polite"></div>
+      <form id="chatForm"><input id="chatIn" maxlength="600" placeholder="Escreva a sua dúvida" autocomplete="off" required><button type="submit">Enviar</button></form>
+    </div>
     <p class="fim">Não achou a resposta? Responda o e-mail que você recebeu ou <a href="https://wa.me/5562998307210?text=Ol%C3%A1!%20Estou%20vendo%20a%20pr%C3%A9via%20do%20site%20de%20London%20Beauty%20e%20tenho%20uma%20d%C3%BAvida.">fale com uma pessoa no WhatsApp</a>.</p>
   </div>
 </dialog>
-<script>(function(){var d=document.documentElement,bs=document.querySelectorAll('.estilos button');function marcar(){var e=d.getAttribute('data-estilo')||'a';bs.forEach(function(b){b.setAttribute('aria-pressed',String(b.dataset.e===e))});document.querySelectorAll('a[href*="contratar"]').forEach(function(a){a.href=a.href.split('?')[0]+(e==='a'?'':'?estilo='+e)})}bs.forEach(function(b){b.addEventListener('click',function(){d.setAttribute('data-estilo',b.dataset.e);try{history.replaceState(null,'',b.dataset.e==='a'?location.pathname:'?estilo='+b.dataset.e)}catch(x){}marcar()})});marcar();var dg=document.getElementById('duvidas'),ab=document.getElementById('abrirDuvidas'),fe=document.getElementById('fecharDuvidas');if(dg&&ab&&dg.showModal){ab.addEventListener('click',function(){dg.showModal()});fe.addEventListener('click',function(){dg.close()});dg.addEventListener('click',function(ev){if(ev.target===dg)dg.close()})}else if(ab){ab.style.display='none'}})()</script>
+<script>(function(){var d=document.documentElement,bs=document.querySelectorAll('.estilos button');function marcar(){var e=d.getAttribute('data-estilo')||'a';bs.forEach(function(b){b.setAttribute('aria-pressed',String(b.dataset.e===e))});document.querySelectorAll('a[href*="contratar"]').forEach(function(a){a.href=a.href.split('?')[0]+(e==='a'?'':'?estilo='+e)})}bs.forEach(function(b){b.addEventListener('click',function(){d.setAttribute('data-estilo',b.dataset.e);try{history.replaceState(null,'',b.dataset.e==='a'?location.pathname:'?estilo='+b.dataset.e)}catch(x){}marcar()})});marcar();var dg=document.getElementById('duvidas'),ab=document.getElementById('abrirDuvidas'),fe=document.getElementById('fecharDuvidas');if(dg&&ab&&dg.showModal){ab.addEventListener('click',function(){dg.showModal()});fe.addEventListener('click',function(){dg.close()});dg.addEventListener('click',function(ev){if(ev.target===dg)dg.close()})}else if(ab){ab.style.display='none'}
+var S='https://vitrine-express.glowapp.workers.dev',P='london-beauty',local=location.protocol==='file:'||['localhost','127.0.0.1'].indexOf(location.hostname)>=0;
+try{if(new URLSearchParams(location.search).has('eu'))localStorage.setItem('vxeu','1');
+if(!local&&!d.classList.contains('print')&&!localStorage.getItem('vxeu')&&!sessionStorage.getItem('vxv')){sessionStorage.setItem('vxv','1');new Image().src=S+'/v/'+P+'.gif?t='+Date.now()}}catch(x){}
+var ch=document.getElementById('chat'),lg=document.getElementById('chatLog'),fm=document.getElementById('chatForm'),inp=document.getElementById('chatIn'),hist=[],visto=false;
+function bolha(quem,texto){var b=document.createElement('div');b.className='bolha '+quem;b.textContent=texto;lg.appendChild(b);b.scrollIntoView({block:'nearest'});return b}
+if(ch&&ab){ab.addEventListener('click',function(){if(visto)return;visto=true;fetch(S+'/estado').then(function(r){return r.json()}).then(function(j){if(j&&j.chat)ch.hidden=false}).catch(function(){})});
+fm.addEventListener('submit',function(ev){ev.preventDefault();var q=inp.value.trim();if(!q)return;inp.value='';bolha('cliente',q);var esp=bolha('assistente','Escrevendo…');fm.querySelector('button').disabled=true;
+fetch(S+'/chat',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({slug:P,nome:document.title.split(' — ')[0],pergunta:q,historico:hist})}).then(function(r){return r.json()}).then(function(j){var t=j.resposta||j.erro||'Não consegui responder agora.';esp.textContent=t;if(j.resposta){hist.push({de:'cliente',texto:q},{de:'assistente',texto:t});hist=hist.slice(-6)}}).catch(function(){esp.textContent='Não consegui responder agora. Fale com a equipe pelo contato abaixo.'}).then(function(){fm.querySelector('button').disabled=false})})}})()</script>
 <a class="btn flutua" href="tel:+558532480680" aria-label="Ligar agora"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg><span>Ligar</span></a>
 </body>
 </html>
