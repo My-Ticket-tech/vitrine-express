@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; script-src 'unsafe-inline'; base-uri 'none'; form-action 'none'">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta name="robots" content="noindex, nofollow">
+<title>Colocar no ar — Chácara Rancho da Serra</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,500;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--fundo:#f6f3ed;--papel:#fffdf9;--tinta:#15171c;--apagado:#636873;--ouro:#9a7338;--linha:#e2dccf;--ok:#1f6b4b;--curva:cubic-bezier(.2,.7,.2,1)}
+*{box-sizing:border-box;margin:0}
+body{background:var(--fundo);color:var(--tinta);font-family:Inter,system-ui,sans-serif;font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
+.c{max-width:1080px;margin:0 auto;padding:0 22px}
+h1,h2{font-family:Fraunces,Georgia,serif;font-weight:400;letter-spacing:-.022em;line-height:1.08;text-wrap:balance}
+h1{font-size:clamp(2.1rem,6.6vw,3.5rem);margin:16px 0 14px}
+h1 em{font-style:italic;color:var(--ouro)}
+h2{font-size:1.5rem;margin-bottom:16px}
+.olho{display:inline-flex;gap:12px;align-items:center;font-size:.72rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--ouro)}
+.olho::before{content:"";width:34px;height:1px;background:currentColor}
+header{padding:20px 0;border-bottom:1px solid var(--linha)}
+header .c{display:flex;justify-content:space-between;gap:12px;align-items:center}
+header b{font-family:Fraunces,serif;font-weight:500;font-size:1.2rem;letter-spacing:-.01em}
+header a{color:var(--apagado);font-size:.9rem;text-underline-offset:4px}
+main{padding:clamp(34px,6vw,72px) 0 72px}
+.sub{color:var(--apagado);max-width:36em;margin-bottom:34px;font-size:1.06rem}
+.grade{display:grid;gap:24px}
+.col{display:grid;gap:24px;align-content:start}
+.cx{background:var(--papel);border:1px solid var(--linha);border-radius:22px;padding:clamp(22px,4vw,32px);box-shadow:0 30px 60px -44px rgba(21,23,28,.35)}
+.resumo{display:grid;grid-template-columns:auto 1fr;gap:20px;align-items:center}
+.resumo img{width:104px;border-radius:14px;display:block;box-shadow:0 18px 30px -18px rgba(0,0,0,.45)}
+.de{color:var(--apagado);text-decoration:line-through;font-size:.92rem}
+.preco{font-family:Fraunces,serif;font-weight:500;font-size:clamp(2.6rem,9vw,3.4rem);line-height:1;letter-spacing:-.03em;margin:4px 0 8px}
+.cond{font-size:.92rem;color:var(--apagado)}
+.cond b{color:var(--tinta);font-weight:600}
+ul.inclui{list-style:none;padding:0;display:grid;gap:11px;margin-top:22px;padding-top:22px;border-top:1px solid var(--linha)}
+ul.inclui li{padding-left:30px;position:relative}
+ul.inclui li::before{content:"";position:absolute;left:4px;top:.5em;width:11px;height:6px;border-left:2px solid var(--ok);border-bottom:2px solid var(--ok);transform:rotate(-45deg)}
+.garantia{display:grid;grid-template-columns:auto 1fr;gap:16px;align-items:center;background:color-mix(in srgb,var(--ok) 8%,var(--papel));border:1px solid color-mix(in srgb,var(--ok) 28%,var(--linha));border-radius:18px;padding:18px 20px}
+.garantia svg{color:var(--ok)}
+.garantia b{display:block}
+.garantia span{color:var(--apagado);font-size:.94rem}
+ol.passos{list-style:none;padding:0;display:grid;gap:18px;counter-reset:p}
+ol.passos li{counter-increment:p;display:grid;grid-template-columns:auto 1fr;gap:4px 16px}
+ol.passos li::before{content:counter(p,decimal-leading-zero);grid-row:span 2;font-family:Fraunces,serif;font-size:1.3rem;color:var(--ouro);line-height:1.2}
+ol.passos b{font-weight:600}
+ol.passos span{color:var(--apagado);font-size:.95rem}
+.qr{width:216px;max-width:100%;margin:4px auto 18px;display:block;padding:12px;background:#fff;border:1px solid var(--linha);border-radius:16px}
+.qr svg{width:100%;height:auto;display:block}
+textarea{width:100%;font:12px/1.45 ui-monospace,Consolas,monospace;border:1px solid var(--linha);border-radius:12px;padding:12px;resize:none;background:var(--fundo);color:var(--tinta)}
+.btn{display:inline-block;width:100%;text-align:center;background:var(--tinta);color:#fff;text-decoration:none;font:600 1rem Inter,sans-serif;padding:16px 22px;border-radius:999px;border:0;cursor:pointer;margin-top:12px;transition:transform .3s var(--curva);box-shadow:0 18px 30px -18px rgba(21,23,28,.7)}
+.btn:hover{transform:translateY(-2px)}
+.btn.sec{background:transparent;color:var(--tinta);box-shadow:inset 0 0 0 1.5px var(--tinta)}
+.nota{font-size:.87rem;color:var(--apagado);margin-top:12px}
+dl{display:grid;grid-template-columns:auto 1fr;gap:8px 16px;font-size:.95rem;margin-top:20px;padding-top:18px;border-top:1px solid var(--linha)}
+dt{color:var(--apagado)}dd{font-weight:600;word-break:break-all;text-align:right}
+details{border-bottom:1px solid var(--linha);padding:16px 0}
+details:first-of-type{border-top:1px solid var(--linha)}
+summary{font-weight:600;cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:16px}
+summary::after{content:"+";font-family:Fraunces,serif;font-size:1.3rem;line-height:1;color:var(--ouro)}
+details[open] summary::after{content:"–"}
+summary::-webkit-details-marker{display:none}
+details p{color:var(--apagado);margin-top:10px;max-width:40em}
+footer{border-top:1px solid var(--linha);padding:24px 0 44px;color:var(--apagado);font-size:.88rem}
+@media(min-width:880px){.grade{grid-template-columns:1.05fr .95fr;align-items:start;gap:32px}.pix{position:sticky;top:24px}}
+</style>
+</head>
+<body>
+<header><div class="c"><b>Vitrine Express</b><a href="../">Voltar para a prévia</a></div></header>
+<main><div class="c">
+  <span class="olho">Publicação</span>
+  <h1>Colocar o site de <em>Chácara Rancho da Serra</em> no ar</h1>
+  <p class="sub">A prévia que você viu passa a ser o site oficial do negócio: sem a faixa de aviso, com os seus textos, as suas fotos e o seu endereço na internet.</p>
+  <div class="grade">
+    <div class="col">
+      <div class="cx">
+        <div class="resumo">
+          <img src="../print.jpg" alt="Prévia do site de Chácara Rancho da Serra no celular" loading="lazy">
+          <div>
+            <div class="de">Valor de tabela: R$ 4.799</div>
+            <div class="preco">R$ 749</div>
+            <div class="cond"><b>Pagamento único.</b> Sem mensalidade.<br>Condição válida até 30/11/2027.</div>
+          </div>
+        </div>
+        <ul class="inclui">
+          <li>Site publicado em até 1 dia útil após o pagamento</li>
+          <li>Endereço do site: <b>my-ticket-tech.github.io/vitrine-express/chacara-rancho-da-serra/</b></li>
+          <li>Design desenvolvido para o seu segmento</li>
+          <li>Seus textos, serviços, preços e fotos</li>
+          <li>Botão de contato, mapa e horário</li>
+          <li>Hospedagem incluída por 12 meses</li>
+          <li>Ajustes por e-mail nos primeiros 30 dias</li>
+        </ul>
+        <p class="nota">No primeiro ano, o valor equivale a cerca de R$ 2,05 por dia. Depois de 12 meses, a renovação da hospedagem é de R$ 97 por ano, sem renovação automática.</p>
+      </div>
+      <div class="garantia">
+        <svg viewBox="0 0 24 24" width="34" height="34" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 5 6v5c0 4.6 2.9 8.3 7 10 4.1-1.7 7-5.4 7-10V6z"/><path d="m9 12 2 2 4-4"/></svg>
+        <div><b>Garantia de 7 dias</b><span>Se não ficar satisfeito depois da publicação, devolvemos o valor integral.</span></div>
+      </div>
+      <div class="cx">
+        <h2>Como funciona</h2>
+        <ol class="passos">
+          <li><b>Pague o Pix de R$ 749</b><span>Pelo QR Code ou pelo código copia e cola.</span></li>
+          <li><b>Envie o comprovante por e-mail</b><span>Use o botão "Já paguei". No mesmo e-mail você pode mandar logo, fotos e mudanças de texto.</span></li>
+          <li><b>Receba o endereço do site</b><span>O pagamento é conferido em até 1 dia útil. Confirmado, o site vai ao ar e o endereço chega por e-mail.</span></li>
+        </ol>
+      </div>
+      <div>
+        <h2>Perguntas frequentes</h2>
+        <details><summary>E se eu não ficar satisfeito?</summary><p>Você tem 7 dias depois da publicação para pedir a devolução integral do valor. Basta responder o e-mail de entrega.</p></details>
+        <details><summary>Tem mensalidade?</summary><p>Não. O pagamento é único e inclui 12 meses de hospedagem. Depois disso, a renovação é de R$ 97 por ano, e só acontece se você quiser.</p></details>
+        <details><summary>Posso mudar os textos e as fotos?</summary><p>Sim. Envie por e-mail os seus textos, serviços, preços e fotos: os ajustes estão incluídos nos primeiros 30 dias.</p></details>
+        <details><summary>Em quanto tempo o site fica no ar?</summary><p>Em até 1 dia útil. Depois que você envia o comprovante, o pagamento é conferido e o site é publicado; você recebe o endereço por e-mail.</p></details>
+      </div>
+    </div>
+    <div class="cx pix">
+      <h2>Pagamento por Pix</h2>
+      <div class="qr"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 51 51" shape-rendering="crispEdges"><path fill="#ffffff" d="M0 0h51v51H0z"/><path stroke="#000000" d="M1 1.5h7m1 0h1m2 0h1m1 0h4m1 0h2m1 0h9m2 0h1m1 0h1m5 0h1m1 0h7M1 2.5h1m5 0h1m1 0h1m1 0h2m3 0h1m3 0h2m1 0h2m2 0h4m1 0h1m4 0h5m1 0h1m5 0h1M1 3.5h1m1 0h3m1 0h1m3 0h2m4 0h1m8 0h1m2 0h1m2 0h1m2 0h4m1 0h2m1 0h1m1 0h3m1 0h1M1 4.5h1m1 0h3m1 0h1m1 0h4m1 0h1m2 0h1m1 0h1m2 0h1m1 0h1m1 0h2m1 0h4m2 0h1m2 0h1m1 0h1m2 0h1m1 0h3m1 0h1M1 5.5h1m1 0h3m1 0h1m3 0h2m1 0h1m1 0h5m2 0h6m1 0h2m4 0h1m1 0h1m4 0h1m1 0h3m1 0h1M1 6.5h1m5 0h1m2 0h3m1 0h2m1 0h7m3 0h1m5 0h3m3 0h1m3 0h1m5 0h1M1 7.5h7m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h7M9 8.5h2m2 0h3m1 0h1m2 0h1m1 0h2m3 0h2m1 0h2m1 0h1m2 0h1M1 9.5h1m1 0h2m1 0h3m2 0h2m1 0h1m1 0h3m1 0h2m1 0h5m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m2 0h2m1 0h1m2 0h1m1 0h2M2 10.5h1m3 0h1m3 0h1m1 0h1m2 0h5m1 0h1m1 0h1m4 0h1m2 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h3M2 11.5h3m1 0h3m3 0h2m1 0h4m2 0h1m3 0h3m2 0h2m1 0h1m1 0h2m1 0h1m1 0h1m1 0h2m1 0h1M1 12.5h1m2 0h1m5 0h1m3 0h3m4 0h2m2 0h2m1 0h2m2 0h1m3 0h1m1 0h1m1 0h3m1 0h1m2 0h2M1 13.5h4m2 0h2m2 0h2m5 0h3m1 0h1m1 0h1m3 0h1m2 0h3m3 0h3m1 0h2m3 0h1M2 14.5h1m1 0h1m4 0h3m3 0h1m5 0h1m2 0h2m2 0h2m2 0h1m1 0h2m1 0h1m1 0h4m1 0h1m1 0h1m1 0h1M1 15.5h2m1 0h6m2 0h2m2 0h2m1 0h1m2 0h4m4 0h1m1 0h2m1 0h1m3 0h3m1 0h3M1 16.5h4m1 0h1m2 0h6m3 0h1m3 0h1m2 0h1m5 0h2m1 0h1m1 0h2m5 0h1m2 0h2m1 0h1M1 17.5h8m1 0h6m1 0h3m1 0h2m1 0h1m8 0h2m1 0h1m2 0h3m5 0h2M4 18.5h1m4 0h1m1 0h2m3 0h2m6 0h6m5 0h2m1 0h1m3 0h1m4 0h1m1 0h1M2 19.5h1m3 0h2m1 0h1m2 0h6m1 0h3m2 0h2m2 0h1m1 0h2m5 0h1m7 0h1m1 0h2M1 20.5h5m3 0h4m2 0h1m1 0h1m2 0h1m2 0h2m2 0h1m1 0h2m2 0h1m1 0h2m2 0h1m2 0h1m2 0h1m2 0h2M1 21.5h1m4 0h2m3 0h1m1 0h1m4 0h3m2 0h1m1 0h1m2 0h3m2 0h2m4 0h4m1 0h1m3 0h2M5 22.5h2m1 0h1m1 0h2m1 0h1m1 0h5m1 0h1m1 0h3m2 0h1m5 0h1m2 0h1m2 0h2m4 0h2M1 23.5h2m1 0h9m2 0h1m5 0h1m1 0h5m1 0h2m2 0h2m1 0h1m1 0h1m1 0h7M1 24.5h1m3 0h1m3 0h2m2 0h1m1 0h2m1 0h4m1 0h1m3 0h1m1 0h1m2 0h1m1 0h1m2 0h2m1 0h2m3 0h1m2 0h1M2 25.5h1m1 0h2m1 0h1m1 0h2m3 0h2m2 0h1m1 0h4m1 0h1m1 0h2m2 0h1m2 0h2m1 0h2m1 0h2m1 0h1m1 0h3M2 26.5h4m3 0h3m1 0h2m1 0h2m4 0h2m3 0h1m2 0h2m1 0h1m1 0h1m1 0h3m1 0h1m3 0h4M1 27.5h1m1 0h7m4 0h1m8 0h12m2 0h3m1 0h5m1 0h1m1 0h1M1 28.5h1m2 0h1m1 0h1m3 0h1m1 0h4m2 0h1m6 0h2m1 0h1m6 0h2m1 0h3m1 0h2m1 0h5M5 29.5h3m1 0h5m1 0h2m2 0h1m1 0h1m1 0h1m5 0h1m1 0h3m5 0h1m2 0h1m3 0h3M1 30.5h1m2 0h2m2 0h1m2 0h1m2 0h1m1 0h1m1 0h1m2 0h1m6 0h2m3 0h1m2 0h1m3 0h2m2 0h1m1 0h1M1 31.5h2m1 0h7m1 0h1m1 0h5m2 0h2m1 0h2m1 0h2m8 0h1m3 0h1m1 0h1m2 0h1M1 32.5h2m1 0h1m4 0h1m2 0h1m2 0h1m1 0h2m1 0h1m1 0h1m1 0h1m1 0h1m4 0h1m1 0h4m1 0h1m1 0h1m6 0h1m1 0h1M3 33.5h2m1 0h3m1 0h1m2 0h3m2 0h1m1 0h3m2 0h2m1 0h1m2 0h1m1 0h1m2 0h4m4 0h1m2 0h1M1 34.5h3m1 0h1m3 0h1m1 0h2m1 0h1m2 0h3m6 0h5m2 0h1m1 0h1m2 0h2m1 0h5m3 0h1M2 35.5h2m1 0h1m1 0h1m2 0h2m1 0h1m3 0h3m3 0h1m3 0h4m1 0h1m4 0h1m1 0h1m5 0h2m1 0h1M3 36.5h2m1 0h1m2 0h1m1 0h1m4 0h1m1 0h1m3 0h4m3 0h1m1 0h1m1 0h1m1 0h1m2 0h4m1 0h2m2 0h2M1 37.5h3m3 0h1m1 0h2m1 0h1m1 0h1m1 0h2m1 0h2m1 0h1m2 0h1m2 0h6m2 0h1m1 0h4m2 0h3m1 0h1M3 38.5h1m1 0h1m2 0h2m3 0h1m2 0h3m1 0h1m2 0h1m2 0h6m1 0h2m2 0h4m7 0h2M2 39.5h1m3 0h3m3 0h7m2 0h2m1 0h1m1 0h2m1 0h2m2 0h2m1 0h1m2 0h1m2 0h2m2 0h2M2 40.5h3m4 0h1m1 0h4m2 0h1m1 0h1m1 0h1m2 0h1m8 0h1m1 0h2m2 0h2m2 0h1m1 0h3m1 0h1M1 41.5h3m3 0h2m4 0h3m2 0h2m3 0h5m5 0h7m1 0h6m1 0h1M9 42.5h4m1 0h1m2 0h1m1 0h2m2 0h1m3 0h1m1 0h3m4 0h1m1 0h4m3 0h1m1 0h2M1 43.5h7m1 0h1m2 0h1m1 0h1m1 0h1m1 0h1m1 0h4m1 0h1m1 0h4m3 0h2m1 0h1m3 0h1m1 0h1m1 0h1m1 0h1m1 0h1M1 44.5h1m5 0h1m1 0h2m5 0h2m5 0h1m3 0h3m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m3 0h1m3 0h1M1 45.5h1m1 0h3m1 0h1m3 0h2m1 0h1m1 0h2m1 0h1m2 0h6m2 0h1m1 0h4m1 0h11m1 0h1M1 46.5h1m1 0h3m1 0h1m1 0h2m1 0h1m1 0h1m1 0h3m6 0h3m3 0h3m1 0h2m2 0h5m5 0h1M1 47.5h1m1 0h3m1 0h1m1 0h3m1 0h5m2 0h6m3 0h2m2 0h5m1 0h1m4 0h1m3 0h1M1 48.5h1m5 0h1m4 0h1m1 0h2m3 0h2m1 0h3m2 0h3m5 0h2m1 0h1m1 0h2m5 0h2M1 49.5h7m1 0h2m5 0h2m1 0h1m2 0h2m1 0h1m2 0h1m1 0h2m5 0h2m1 0h1m2 0h1m1 0h2m2 0h1"/></svg>
+</div>
+      <textarea id="cc" rows="5" readonly>00020126580014br.gov.bcb.pix01361bc60051-d7b1-4370-8d76-07d4719769e25204000053039865406749.005802BR5910PEDRO JOAO6008BRASILIA62180514VXmwfhl1zehw5d6304DB23</textarea>
+      <button class="btn" id="copiar">Copiar código Pix</button>
+      <dl>
+        <dt>Valor</dt><dd>R$ 749,00</dd>
+        <dt>Chave</dt><dd>1bc60051-d7b1-4370-8d76-07d4719769e2</dd>
+        <dt>Recebedor</dt><dd>PEDRO JOAO</dd>
+      </dl>
+      <p class="nota">Confira o nome do recebedor no aplicativo do seu banco antes de confirmar. Pague somente pelo código desta página.</p>
+      <a class="btn sec" href="mailto:vitrinexpress.contato@gmail.com?subject=Comprovante%20%E2%80%94%20Ch%C3%A1cara%20Rancho%20da%20Serra%20%5B%23mwfhl1zehw5d%5D&amp;body=Ol%C3%A1!%20Segue%20o%20comprovante%20do%20Pix%20de%20R%24%20749%20do%20site%20Ch%C3%A1cara%20Rancho%20da%20Serra.%0A%0A(Anexe%20o%20comprovante.%20Se%20quiser%2C%20mande%20tamb%C3%A9m%20logo%2C%20fotos%20e%20mudan%C3%A7as%20de%20texto.)">Já paguei — enviar comprovante</a>
+      <p class="nota">Ou escreva para <b>vitrinexpress.contato@gmail.com</b> com o assunto "Comprovante — Chácara Rancho da Serra [#mwfhl1zehw5d]".</p>
+      <p class="nota">Prefere falar com uma pessoa antes? <a href="https://wa.me/5562998307210?text=Ol%C3%A1!%20Estou%20vendo%20a%20pr%C3%A9via%20do%20site%20de%20Ch%C3%A1cara%20Rancho%20da%20Serra%20e%20tenho%20uma%20d%C3%BAvida." style="color:inherit;font-weight:600">Chamar no WhatsApp</a></p>
+    </div>
+  </div>
+</div></main>
+<footer><div class="c">Vitrine Express · vitrinexpress.contato@gmail.com · Dúvidas? Responda o e-mail que você recebeu. · <a href="../../../termos/" style="color:inherit">Termos de contratação</a></div></footer>
+<script>
+document.getElementById('copiar').addEventListener('click', async function () {
+  var t = document.getElementById('cc'); t.select();
+  try { await navigator.clipboard.writeText(t.value); } catch (e) { document.execCommand('copy'); }
+  this.textContent = 'Código copiado'; var b = this; setTimeout(function () { b.textContent = 'Copiar código Pix'; }, 2500);
+});
+// Estilo de layout escolhido na prévia (1, 2 ou 3): vai junto no e-mail do comprovante e no link de volta.
+(function () {
+  var e = new URLSearchParams(location.search).get('estilo'), n = { b: '2 (Contraste)', c: '3 (Minimal)' }[e];
+  if (!n) return;
+  document.querySelectorAll('a[href^="mailto:"]').forEach(function (a) { a.href = a.href.replace('&body=', '&body=' + encodeURIComponent('Estilo escolhido: ' + n + String.fromCharCode(10, 10))); });
+  var v = document.querySelector('header a'); if (v) v.href = '../?estilo=' + e;
+  var s = document.querySelector('.sub'); if (s) s.insertAdjacentHTML('afterend', '<p class="nota" style="margin:-22px 0 30px">Estilo de layout escolhido: <b>' + n + '</b>. Ele será aplicado na publicação.</p>');
+})();
+</script>
+</body>
+</html>
