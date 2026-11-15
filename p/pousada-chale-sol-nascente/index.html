@@ -16,7 +16,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,500;1,400&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"LocalBusiness","name":"Pousada Chalé Sol Nascente","telephone":"+5512997228777","address":{"@type":"PostalAddress","streetAddress":"Estrada Municipal Sebastião Onório Pereira, 194","addressLocality":"Santo Antônio do Pinhal","addressCountry":"BR"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"LocalBusiness","name":"Pousada Chalé Sol Nascente","telephone":"+5512997228777","address":{"@type":"PostalAddress","streetAddress":"Estrada Municipal Sebastião Onório Pereira, 194","addressLocality":"Santo Antônio do Pinhal","addressCountry":"BR"},"paymentAccepted":"Cartão de crédito, Cartão de débito, Dinheiro","geo":{"@type":"GeoCoordinates","latitude":-22.826766,"longitude":-45.738397}}</script>
 <script>(function(){var d=document.documentElement;var e=new URLSearchParams(location.search).get('estilo');if(/^[abc]$/.test(e||''))d.setAttribute('data-estilo',e);if(new URLSearchParams(location.search).has('print')){d.classList.add('print');return}if(!('IntersectionObserver' in window)||matchMedia('(prefers-reduced-motion: reduce)').matches)return;d.classList.add('anima');addEventListener('DOMContentLoaded',function(){var o=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');o.unobserve(e.target)}})},{rootMargin:'0px 0px -6% 0px',threshold:.06});document.querySelectorAll('.rv').forEach(function(el){o.observe(el)})})})()</script>
 <style>
 :root{--fundo:#f7f4ee;--tinta:#22281f;--destaque:#3c5a3e;--sobre:#ffffff;--suave:#ece7dc;--linha:#d9d2c2;
@@ -111,10 +111,11 @@ section.bloco{padding:clamp(64px,10vw,128px) 0}
 .onde .c{display:grid;gap:36px}
 .onde.so .c{max-width:760px}
 .dados{display:grid;border-top:1px solid var(--linha)}
-.dados>div{display:grid;grid-template-columns:104px 1fr;gap:14px;padding:19px 0;border-bottom:1px solid var(--linha);align-items:baseline}
+.dados>div{display:grid;grid-template-columns:128px 1fr;gap:14px;padding:19px 0;border-bottom:1px solid var(--linha);align-items:baseline}
 .dados dt{font-size:.72rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--apagado)}
 .dados dd{font-size:1.06rem;font-weight:500}
 .dados dd a{text-decoration-color:var(--linha);text-underline-offset:4px}
+@media(max-width:420px){.dados>div{grid-template-columns:1fr;gap:4px}}
 .onde .lnk{margin-top:26px}
 .mapa{border-radius:var(--raio);overflow:hidden;min-height:340px;background:var(--suave);box-shadow:var(--sombra)}
 .mapa iframe{width:100%;height:100%;min-height:340px;border:0;display:block;filter:grayscale(.35) contrast(1.04)}
@@ -252,7 +253,7 @@ html[data-estilo="c"] .mapa{box-shadow:none;border:1px solid var(--linha)}
   </div>
 </div></section>
 
-<div class="faixa"><div class="c"><ul><li><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>Reserva direta, sem taxa de aplicativo</span></li><li><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>Atendimento de quem é da região</span></li><li><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>Resposta rápida</span></li></ul></div></div>
+<div class="faixa"><div class="c"><ul><li><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>Aceita cartão</span></li><li><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>Aceita Bitcoin</span></li><li><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>Reserva direta, sem taxa de aplicativo</span></li></ul></div></div>
 
 <section class="bloco" id="servicos"><div class="c">
   <div class="cab rv"><span class="olho">Serviços</span><h2>O que fazemos <em>por você.</em></h2><p>Escolha o que precisa e fale com a gente pelo WhatsApp.</p></div>
@@ -281,8 +282,14 @@ html[data-estilo="c"] .mapa{box-shadow:none;border:1px solid var(--linha)}
     <dl class="dados">
       <div><dt>Endereço</dt><dd>Estrada Municipal Sebastião Onório Pereira, 194, Rio Preto, Santo Antônio do Pinhal</dd></div>
       
+      
       <div><dt>WhatsApp</dt><dd><a href="https://wa.me/5512997228777?text=Ol%C3%A1!%20Vi%20o%20site%20e%20gostaria%20de%20consultar%20datas%20e%20valores.">(12) 99722-8777</a></dd></div>
       
+      
+      
+      
+      <div><dt>Pagamento</dt><dd>Cartão de crédito · Cartão de débito · Dinheiro</dd></div>
+      <div><dt>Comodidades</dt><dd>Aceita Bitcoin</dd></div>
       
     </dl>
     <a class="lnk" href="https://www.google.com/maps/search/?api=1&query=Estrada%20Municipal%20Sebasti%C3%A3o%20On%C3%B3rio%20Pereira%2C%20194%2C%20Rio%20Preto%2C%20Santo%20Ant%C3%B4nio%20do%20Pinhal">Como chegar <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>

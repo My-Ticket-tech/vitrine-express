@@ -16,7 +16,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;1,500&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"LocalBusiness","name":"Studio Luzia","telephone":"+5531171404","address":{"@type":"PostalAddress","streetAddress":"Rua Guaiacá, 540","addressLocality":"Rio de Janeiro","addressCountry":"BR"},"openingHours":"Ter a Sáb 09h a 19h"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"LocalBusiness","name":"Studio Luzia","telephone":"+5531171404","address":{"@type":"PostalAddress","streetAddress":"Rua Guaiacá, 540","addressLocality":"Rio de Janeiro","addressCountry":"BR"},"openingHours":"Ter a Sáb 09h a 19h","geo":{"@type":"GeoCoordinates","latitude":-22.866033,"longitude":-43.451359}}</script>
 <script>(function(){var d=document.documentElement;var e=new URLSearchParams(location.search).get('estilo');if(/^[abc]$/.test(e||''))d.setAttribute('data-estilo',e);if(new URLSearchParams(location.search).has('print')){d.classList.add('print');return}if(!('IntersectionObserver' in window)||matchMedia('(prefers-reduced-motion: reduce)').matches)return;d.classList.add('anima');addEventListener('DOMContentLoaded',function(){var o=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');o.unobserve(e.target)}})},{rootMargin:'0px 0px -6% 0px',threshold:.06});document.querySelectorAll('.rv').forEach(function(el){o.observe(el)})})})()</script>
 <style>
 :root{--fundo:#fbf6f2;--tinta:#2b1d1a;--destaque:#b4532a;--sobre:#ffffff;--suave:#f3e8e0;--linha:#e4d3c7;
@@ -111,10 +111,11 @@ section.bloco{padding:clamp(64px,10vw,128px) 0}
 .onde .c{display:grid;gap:36px}
 .onde.so .c{max-width:760px}
 .dados{display:grid;border-top:1px solid var(--linha)}
-.dados>div{display:grid;grid-template-columns:104px 1fr;gap:14px;padding:19px 0;border-bottom:1px solid var(--linha);align-items:baseline}
+.dados>div{display:grid;grid-template-columns:128px 1fr;gap:14px;padding:19px 0;border-bottom:1px solid var(--linha);align-items:baseline}
 .dados dt{font-size:.72rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--apagado)}
 .dados dd{font-size:1.06rem;font-weight:500}
 .dados dd a{text-decoration-color:var(--linha);text-underline-offset:4px}
+@media(max-width:420px){.dados>div{grid-template-columns:1fr;gap:4px}}
 .onde .lnk{margin-top:26px}
 .mapa{border-radius:var(--raio);overflow:hidden;min-height:340px;background:var(--suave);box-shadow:var(--sombra)}
 .mapa iframe{width:100%;height:100%;min-height:340px;border:0;display:block;filter:grayscale(.35) contrast(1.04)}
@@ -281,7 +282,13 @@ html[data-estilo="c"] .mapa{box-shadow:none;border:1px solid var(--linha)}
     <dl class="dados">
       <div><dt>Endereço</dt><dd>Rua Guaiacá, 540, Padre Miguel, Rio de Janeiro</dd></div>
       <div><dt>Horário</dt><dd>Ter a Sáb 09h a 19h</dd></div>
+      
       <div><dt>Telefone</dt><dd><a href="tel:+5531171404">31171404</a></dd></div>
+      
+      
+      
+      
+      
       
       
     </dl>

@@ -16,7 +16,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"LocalBusiness","name":"Clínica Odonto médica","telephone":"+557734544211","address":{"@type":"PostalAddress","streetAddress":"Rua Clovis Moreira da Cunha, 138","addressLocality":"Caetité","addressCountry":"BR"},"openingHours":"Seg a Sex 08h a 18h · Sáb 08h a 14h"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"LocalBusiness","name":"Clínica Odonto médica","telephone":"+5577999997481","address":{"@type":"PostalAddress","streetAddress":"Rua Clovis Moreira da Cunha, 138","addressLocality":"Caetité","addressCountry":"BR"},"openingHours":"Seg a Sex 08h a 18h · Sáb 08h a 14h","geo":{"@type":"GeoCoordinates","latitude":-14.066786,"longitude":-42.492034}}</script>
 <script>(function(){var d=document.documentElement;var e=new URLSearchParams(location.search).get('estilo');if(/^[abc]$/.test(e||''))d.setAttribute('data-estilo',e);if(new URLSearchParams(location.search).has('print')){d.classList.add('print');return}if(!('IntersectionObserver' in window)||matchMedia('(prefers-reduced-motion: reduce)').matches)return;d.classList.add('anima');addEventListener('DOMContentLoaded',function(){var o=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');o.unobserve(e.target)}})},{rootMargin:'0px 0px -6% 0px',threshold:.06});document.querySelectorAll('.rv').forEach(function(el){o.observe(el)})})})()</script>
 <style>
 :root{--fundo:#f5fafb;--tinta:#0f2a33;--destaque:#0e7c8f;--sobre:#ffffff;--suave:#e4f1f3;--linha:#cbe2e6;
@@ -111,10 +111,11 @@ section.bloco{padding:clamp(64px,10vw,128px) 0}
 .onde .c{display:grid;gap:36px}
 .onde.so .c{max-width:760px}
 .dados{display:grid;border-top:1px solid var(--linha)}
-.dados>div{display:grid;grid-template-columns:104px 1fr;gap:14px;padding:19px 0;border-bottom:1px solid var(--linha);align-items:baseline}
+.dados>div{display:grid;grid-template-columns:128px 1fr;gap:14px;padding:19px 0;border-bottom:1px solid var(--linha);align-items:baseline}
 .dados dt{font-size:.72rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--apagado)}
 .dados dd{font-size:1.06rem;font-weight:500}
 .dados dd a{text-decoration-color:var(--linha);text-underline-offset:4px}
+@media(max-width:420px){.dados>div{grid-template-columns:1fr;gap:4px}}
 .onde .lnk{margin-top:26px}
 .mapa{border-radius:var(--raio);overflow:hidden;min-height:340px;background:var(--suave);box-shadow:var(--sombra)}
 .mapa iframe{width:100%;height:100%;min-height:340px;border:0;display:block;filter:grayscale(.35) contrast(1.04)}
@@ -227,7 +228,7 @@ html[data-estilo="c"] .mapa{box-shadow:none;border:1px solid var(--linha)}
 <header class="topo"><div class="c">
   <a class="marca" href="#"><i>CO</i><span>Clínica Odonto médica</span></a>
   <nav class="menu" aria-label="Seções"><a href="#servicos">Serviços</a><a href="#sobre">Sobre</a><a href="#onde">Contato</a></nav>
-  <a class="btn p" href="tel:+557734544211" aria-label="Ligar agora"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg><span>Ligar agora</span></a>
+  <a class="btn p" href="https://wa.me/5577999997481?text=Ol%C3%A1!%20Vi%20o%20site%20e%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o." aria-label="Agendar avaliação"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg><span>Agendar avaliação</span></a>
 </div></header>
 
 <main>
@@ -235,9 +236,9 @@ html[data-estilo="c"] .mapa{box-shadow:none;border:1px solid var(--linha)}
   <div class="rv">
     <div class="olho">Consultório odontológico · Caetité</div>
     <h1>Seu sorriso bem cuidado, sem pressa.</h1>
-    <p class="apoio">Consultas com hora marcada em Caetité. Tire suas dúvidas e agende.</p>
+    <p class="apoio">Consultas com hora marcada em Caetité. Tire suas dúvidas e agende direto pelo WhatsApp.</p>
     <div class="acoes">
-      <a class="btn" href="tel:+557734544211"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg><span>Ligar agora</span></a>
+      <a class="btn" href="https://wa.me/5577999997481?text=Ol%C3%A1!%20Vi%20o%20site%20e%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o."><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg><span>Agendar avaliação</span></a>
       <a class="lnk" href="#servicos">Ver serviços <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
     </div>
     
@@ -247,15 +248,15 @@ html[data-estilo="c"] .mapa{box-shadow:none;border:1px solid var(--linha)}
     <div class="ficha">
       <div><span>Horário</span><b>Seg a Sex 08h a 18h · Sáb 08h a 14h</b></div>
       <div><span>Endereço</span><b>Rua Clovis Moreira da Cunha, 138, Centro, Caetité</b></div>
-      <div><span>Telefone</span><b>(77) 3454-4211</b></div>
+      <div><span>WhatsApp</span><b>(77) 99999-7481</b></div>
     </div>
   </div>
 </div></section>
 
-<div class="faixa"><div class="c"><ul><li><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>Hora marcada</span></li><li><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>Tratamento explicado antes de começar</span></li><li><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>Parcelamento no cartão</span></li></ul></div></div>
+<div class="faixa"><div class="c"><ul><li><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>Acesso para cadeira de rodas</span></li><li><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>Hora marcada</span></li><li><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>Tratamento explicado antes de começar</span></li></ul></div></div>
 
 <section class="bloco" id="servicos"><div class="c">
-  <div class="cab rv"><span class="olho">Serviços</span><h2>O que fazemos <em>por você.</em></h2><p>Escolha o que precisa e entre em contato.</p></div>
+  <div class="cab rv"><span class="olho">Serviços</span><h2>O que fazemos <em>por você.</em></h2><p>Escolha o que precisa e fale com a gente pelo WhatsApp.</p></div>
   <div class="lista">
     <article class="serv rv" style="--d:0s"><span class="num">01</span><h3>Avaliação</h3><span></span><p>Exame completo e plano de tratamento explicado.</p></article>
     <article class="serv rv" style="--d:0.08s"><span class="num">02</span><h3>Limpeza e prevenção</h3><span></span><p>Para manter dentes e gengiva saudáveis.</p></article>
@@ -271,7 +272,7 @@ html[data-estilo="c"] .mapa{box-shadow:none;border:1px solid var(--linha)}
 <section class="bloco sobre" id="sobre"><div class="c rv">
   <div class="aspas" aria-hidden="true">“</div>
   <blockquote>Aqui o compromisso é simples: fazer bem feito e tratar cada cliente pelo nome.</blockquote>
-  <p>Atendemos em Caetité. Para tirar dúvidas, entre em contato.</p>
+  <p>Atendemos em Caetité. Para tirar dúvidas ou agendar, fale com a gente pelo WhatsApp.</p>
   <div class="ass">Clínica Odonto médica</div>
 </div></section>
 
@@ -279,10 +280,16 @@ html[data-estilo="c"] .mapa{box-shadow:none;border:1px solid var(--linha)}
   <div class="rv">
     <div class="cab"><span class="olho">Contato</span><h2>Onde <em>estamos.</em></h2></div>
     <dl class="dados">
-      <div><dt>Endereço</dt><dd>Rua Clovis Moreira da Cunha, 138, Centro, Caetité</dd></div>
+      <div><dt>Endereço</dt><dd>Rua Clovis Moreira da Cunha, 138, Centro, Caetité · CEP 46400-167</dd></div>
       <div><dt>Horário</dt><dd>Seg a Sex 08h a 18h · Sáb 08h a 14h</dd></div>
+      
+      <div><dt>WhatsApp</dt><dd><a href="https://wa.me/5577999997481?text=Ol%C3%A1!%20Vi%20o%20site%20e%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o.">(77) 99999-7481</a></dd></div>
+      
       <div><dt>Telefone</dt><dd><a href="tel:+557734544211">(77) 3454-4211</a></dd></div>
       
+      
+      
+      <div><dt>Comodidades</dt><dd>Acesso para cadeira de rodas</dd></div>
       
     </dl>
     <a class="lnk" href="https://www.google.com/maps/search/?api=1&query=Rua%20Clovis%20Moreira%20da%20Cunha%2C%20138%2C%20Centro%2C%20Caetit%C3%A9">Como chegar <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
@@ -293,8 +300,8 @@ html[data-estilo="c"] .mapa{box-shadow:none;border:1px solid var(--linha)}
 <section class="final"><div class="c rv">
   <span class="olho">Clínica Odonto médica</span>
   <h2>Será um prazer atender você.</h2>
-  <p>Ligue para a gente e venha nos conhecer em Caetité.</p>
-  <a class="btn" href="tel:+557734544211"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg><span>Ligar agora</span></a>
+  <p>Fale com a gente pelo WhatsApp e venha nos conhecer em Caetité.</p>
+  <a class="btn" href="https://wa.me/5577999997481?text=Ol%C3%A1!%20Vi%20o%20site%20e%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o."><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg><span>Agendar avaliação</span></a>
 </div></section>
 </main>
 
@@ -337,6 +344,6 @@ function bolha(quem,texto){var b=document.createElement('div');b.className='bolh
 if(ch&&ab){ab.addEventListener('click',function(){if(visto)return;visto=true;fetch(S+'/estado').then(function(r){return r.json()}).then(function(j){if(j&&j.chat)ch.hidden=false}).catch(function(){})});
 fm.addEventListener('submit',function(ev){ev.preventDefault();var q=inp.value.trim();if(!q)return;inp.value='';bolha('cliente',q);var esp=bolha('assistente','Escrevendo…');fm.querySelector('button').disabled=true;
 fetch(S+'/chat',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({slug:P,nome:document.title.split(' — ')[0],pergunta:q,historico:hist})}).then(function(r){return r.json()}).then(function(j){var t=j.resposta||j.erro||'Não consegui responder agora.';esp.textContent=t;if(j.resposta){hist.push({de:'cliente',texto:q},{de:'assistente',texto:t});hist=hist.slice(-6)}}).catch(function(){esp.textContent='Não consegui responder agora. Fale com a equipe pelo contato abaixo.'}).then(function(){fm.querySelector('button').disabled=false})})}})()</script>
-<a class="btn flutua" href="tel:+557734544211" aria-label="Ligar agora"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg><span>Ligar</span></a>
+<a class="btn flutua" href="https://wa.me/5577999997481?text=Ol%C3%A1!%20Vi%20o%20site%20e%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o." aria-label="Agendar avaliação"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg><span>WhatsApp</span></a>
 </body>
 </html>
