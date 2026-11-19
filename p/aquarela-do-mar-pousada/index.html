@@ -119,6 +119,10 @@ section.bloco{padding:clamp(64px,10vw,128px) 0}
 .onde .lnk{margin-top:26px}
 .mapa{border-radius:var(--raio);overflow:hidden;min-height:340px;background:var(--suave);box-shadow:var(--sombra)}
 .mapa iframe{width:100%;height:100%;min-height:340px;border:0;display:block;filter:grayscale(.35) contrast(1.04)}
+.mapa .carregar{min-height:340px;display:grid;place-content:center;gap:14px;padding:28px;text-align:center;color:var(--tinta)}
+.mapa .carregar p{max-width:26em;margin:0 auto;font-size:.92rem;opacity:.75}
+.mapa .carregar button{justify-self:center;font:600 .95rem var(--texto);color:var(--sobre);background:var(--destaque);border:0;border-radius:999px;padding:13px 24px;cursor:pointer}
+footer .linha a{color:inherit;opacity:.8;text-underline-offset:3px}
 .final{position:relative;overflow:hidden;text-align:center;background:var(--destaque);color:var(--sobre);padding:clamp(84px,13vw,156px) 0}
 .final::before{content:"";position:absolute;inset:0;background:repeating-radial-gradient(circle at 50% 118%,transparent 0 64px,color-mix(in srgb,var(--sobre) 16%,transparent) 64px 65px);pointer-events:none}
 .final .c{position:relative;display:grid;justify-items:center;gap:20px}
@@ -309,6 +313,7 @@ html[data-estilo="c"] .mapa{box-shadow:none;border:1px solid var(--linha)}
   <a class="marca" href="#"><i>AM</i><span>Aquarela do Mar Pousada</span></a>
   <div class="linha">
     <span>© 2026 Aquarela do Mar Pousada · Bombinhas</span>
+    
     <span>Site por Vitrine Express</span>
   </div>
 </div></footer>
@@ -342,8 +347,9 @@ sinais.forEach(function(n){addEventListener(n,conta,{passive:true})})}}catch(x){
 var ch=document.getElementById('chat'),lg=document.getElementById('chatLog'),fm=document.getElementById('chatForm'),inp=document.getElementById('chatIn'),hist=[],visto=false;
 function bolha(quem,texto){var b=document.createElement('div');b.className='bolha '+quem;b.textContent=texto;lg.appendChild(b);b.scrollIntoView({block:'nearest'});return b}
 if(ch&&ab){ab.addEventListener('click',function(){if(visto)return;visto=true;fetch(S+'/estado').then(function(r){return r.json()}).then(function(j){if(j&&j.chat)ch.hidden=false}).catch(function(){})});
-fm.addEventListener('submit',function(ev){ev.preventDefault();var q=inp.value.trim();if(!q)return;inp.value='';bolha('cliente',q);var esp=bolha('assistente','Escrevendo…');fm.querySelector('button').disabled=true;
-fetch(S+'/chat',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({slug:P,nome:document.title.split(' — ')[0],pergunta:q,historico:hist})}).then(function(r){return r.json()}).then(function(j){var t=j.resposta||j.erro||'Não consegui responder agora.';esp.textContent=t;if(j.resposta){hist.push({de:'cliente',texto:q},{de:'assistente',texto:t});hist=hist.slice(-6)}}).catch(function(){esp.textContent='Não consegui responder agora. Fale com a equipe pelo contato abaixo.'}).then(function(){fm.querySelector('button').disabled=false})})}})()</script>
+fm.addEventListener('submit',function(ev){ev.preventDefault();var q=inp.value.trim();if(!q)return;inp.value='';bolha('cliente',q);var esp=bolha('assistente',"Escrevendo…");fm.querySelector('button').disabled=true;
+fetch(S+'/chat',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({slug:P,nome:document.title.split(' — ')[0],pergunta:q,historico:hist})}).then(function(r){return r.json()}).then(function(j){var t=j.resposta||j.erro||"Não consegui responder agora.";esp.textContent=t;if(j.resposta){hist.push({de:'cliente',texto:q},{de:'assistente',texto:t});hist=hist.slice(-6)}}).catch(function(){esp.textContent="Não consegui responder agora. Fale com a equipe pelo contato abaixo."}).then(function(){fm.querySelector('button').disabled=false})})}})()</script>
+
 <a class="btn flutua" href="tel:+554733690056" aria-label="Ligar agora"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg><span>Ligar</span></a>
 </body>
 </html>
